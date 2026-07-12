@@ -70,3 +70,64 @@ Decide the final joint layout and servo placement.
 Compare existing open-source robotic arms for design inspiration.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 2**: July 12, 2026
+
+
+Time spent: **2.5 hours**
+
+
+**What I worked on**
+
+Focused today on refining the torque calculations for the robotic arm and updating my preliminary Bill of Materials (BOM).
+
+Using my planned arm length of approximately 42 cm, I recalculated the shoulder torque requirements with a realistic payload of 100 g, which is the maximum weight I currently expect the arm to lift. I estimated the total weight beyond the shoulder joint, including the elbow, wrist, gripper servos, the printed structure, and the payload, then calculated the required torque at full horizontal extension.
+
+
+**What I learned**
+
+Using a 42 cm arm length and a 100 g payload, I calculated that the shoulder joint would require approximately 15.4 kg·cm of torque. This is beyond what a standard MG996R servo, rated at roughly 11–13 kg·cm, can reliably provide with a comfortable safety margin. Based on these calculations, the base and shoulder joints require higher-torque servos.
+
+I researched higher-torque servo options and selected the HOOYIJ DS3230MG as my current choice for the base and shoulder joints. According to the manufacturer's specifications, it provides approximately 29.5 kg·cm at 5 V and up to 34.5 kg·cm at 6.8 V, giving a comfortable safety margin for my current design.
+
+My current planned servo configuration is:
+
+2 × HOOYIJ DS3230MG for the base and shoulder
+
+2 × Deegoo MG996R for the elbow and wrist pitch
+
+2 × MG90S for the wrist roll and gripper
+
+Based on my calculations, the MG90S servos appear suitable for the wrist roll and gripper because these joints have a much shorter lever arm of approximately 5–8 cm. The estimated torque requirement is about 0.84 kg·cm, which is well below the servo's rated torque.
+
+I learned that servo movement can be limited in software using the `constrain()` function before sending a position command. Although the DS3230MG supports approximately 270° of rotation, I currently plan to limit it to 180° because the extra range is not required for this design.
+
+I researched bearing-supported joints, including two-sided U-mount brackets, as a way to reduce the structural load placed on servo output shafts. Because this is a lightweight prototype, I currently plan to build without them and evaluate whether they are needed after testing.
+
+I also reviewed the expected power requirements. Although all six servos are unlikely to stall simultaneously during normal operation, the theoretical worst-case current draw could reach approximately 9–13 A. Based on this, I updated my planned power supply from a 5 V 6 A adapter to a 5 V 10 A (50 W) power supply to provide additional headroom.
+
+I watched several videos of existing robotic arm projects to study different design approaches and gather ideas for my own build. I paid particular attention to joint layouts, servo placement, bracket design, wire management, and overall mechanical structure. This helped me identify features that may be useful to incorporate into my own design while avoiding common design issues.
+
+
+**Decisions made**
+
+My current planned servo configuration consists of two DS3230MG servos for the base and shoulder, two MG996R servos for the elbow and wrist pitch, and two MG90S servos for the wrist roll and gripper.
+
+I set my design payload target to approximately 100 g because it better reflects the lightweight objects I intend the robotic arm to manipulate.
+
+I selected a 5 V 10 A BTF-LIGHTING power supply instead of the originally planned 6 A version.
+
+I added M3 heat-set inserts and an M3 screw kit to the preliminary Bill of Materials for mounting servos and brackets into PLA components.
+
+I also added one 1 kg spool of Elegoo PLA filament to the Bill of Materials.
+
+
+**Next steps**
+
+Begin designing the robotic arm frame in CAD using the planned dimensions and selected servo sizes.
+
+Design the joint brackets and servo mounts to accommodate M3 heat-set inserts.
+
+Verify the servo placement, clearances, and range of motion within the CAD assembly before printing the prototype.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
