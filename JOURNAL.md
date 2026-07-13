@@ -131,3 +131,56 @@ Design the joint brackets and servo mounts to accommodate M3 heat-set inserts.
 Verify the servo placement, clearances, and range of motion within the CAD assembly before printing the prototype.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 3**: July 13, 2026
+
+
+**Time spent**: 4 hours 30 minutes
+
+
+**What I worked on**
+
+Started the CAD design for the robotic arm today, focusing on the base and shoulder assembly. Most of my time was spent designing and understanding the gear system for the base because I wanted to achieve a full 360° rotation using a 270° positional servo instead of switching to a continuous rotation servo or adding a slip ring.
+
+
+**What I learned**
+
+I worked through the relationship between gear ratios and rotational movement. To achieve 360° of platform rotation from a servo capable of rotating 270°, I calculated that a 3:4 step-up gear ratio would provide the required motion.
+
+I learned that gears must have the same module to mesh correctly. Matching the overall diameter alone is not enough because the tooth size and spacing must also be identical.
+
+During the design process, I discovered that my initial gear sizes of 6 and 8 teeth were too small and would not mesh properly due to interference between the teeth. To solve this, I increased the gear sizes to 18 and 24 teeth while maintaining the same 3:4 ratio, resulting in a much more practical gear set.
+
+I used Onshape's Spur Gear FeatureScript to generate accurate involute gears instead of drawing the tooth profiles manually. I also learned how to use the Boolean Union tool to combine multiple solid bodies into a single part.
+
+While working in the assembly environment, I learned how to use Revolute Mates to define rotational motion and Gear Relations to link two gears together so they rotate correctly relative to one another.
+
+I also learned about backlash in 3D-printed gears. Even when the CAD model is mathematically correct, printing tolerances can cause gears to bind if there is no clearance. Because of this, I researched how small adjustments to the center distance can improve gear performance.
+
+For my current 18-tooth and 24-tooth gear set with a module of 1.5, the calculated center distance is 31.5 mm. I currently plan to increase this slightly to approximately 31.7–31.8 mm to account for FDM printing tolerances and reduce the likelihood of binding.
+
+I also watched several videos demonstrating gear design and robotic arm mechanisms. These helped me better understand practical gear layouts, assembly techniques, and common design considerations before continuing with my own CAD model.
+
+
+**Decisions made**
+
+My current design uses a 270° DS3230MG servo with a 3:4 step-up gear ratio to achieve approximately 360° of base rotation.
+
+My current gear design uses an 18-tooth driving gear and a 24-tooth driven gear with a module of 1.5.
+
+I currently plan to use a center distance of approximately 31.7–31.8 mm to provide additional clearance for 3D printing.
+
+Based on my current torque calculations, the reduction in output torque caused by the gear ratio remains acceptable for my planned payload.
+
+
+**Next steps**
+
+Finish the CAD design for the base gear housing and rotating platform.
+
+Print and test the gear pair to verify that the selected center distance provides smooth rotation without excessive backlash or binding.
+
+Continue designing the shoulder joint once the base gear system has been validated.
+
+Begin the CAD design for the elbow and wrist assemblies.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
