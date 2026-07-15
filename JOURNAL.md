@@ -135,7 +135,7 @@ Verify the servo placement, clearances, and range of motion within the CAD assem
 **Day 3**: July 13, 2026
 
 
-**Time spent**: 4 hours 30 minutes
+Time spent: **4 hours 30 minutes**
 
 
 **What I worked on**
@@ -182,5 +182,41 @@ Print and test the gear pair to verify that the selected center distance provide
 Continue designing the shoulder joint once the base gear system has been validated.
 
 Begin the CAD design for the elbow and wrist assemblies.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 4**: July 14, 2026
+
+Time spent: **3 hours**
+
+**What I worked on**
+
+Continued working on the CAD design and preparing the model for 3D printing. Most of today's work focused on researching tolerances and print settings for small, high-stress features such as gear teeth, heat-set insert holes, and press-fit joints. By the end of today's session, I estimate the CAD design is approximately 75% complete.
+
+**What I learned**
+
+I researched recommended clearances for different types of fits used in 3D printing. A clearance of approximately 0.1 mm is commonly recommended for press-fit parts, while 0.2–0.3 mm provides a smoother moving fit and 0.4–0.5 mm creates a looser fit. Using clearances that are too small can cause parts to fuse together or become difficult to assemble after printing.
+
+I learned how to size holes for M3 heat-set inserts. Based on the insert dimensions I plan to use, the hole should be approximately 0.1 mm larger than the measured outer diameter of the insert, with about 0.5 mm of additional depth so the insert can sit flush once installed.
+
+I researched proper techniques for installing heat-set inserts using a soldering iron. Maintaining a temperature of approximately 200–220°C and applying steady downward pressure helps produce a cleaner installation. I also learned that excessive movement while removing the soldering iron or using an undersized hole can cause excess plastic to build up around the insert instead of leaving a clean, flush surface.
+
+I compared manually adjusting dimensions in CAD with using a slicer's hole compensation feature. Based on my research and the printer I plan to use, I currently intend to make dimensional adjustments directly in the CAD model because it provides more consistent and predictable results.
+
+I also researched print settings for small, detailed parts such as gears and servo brackets. Based on the recommendations I found, I currently plan to use a layer height of 0.16 mm with 3–4 wall loops to provide a good balance between print quality and part strength.
+
+**Decisions made**
+
+I plan to standardize the clearances used throughout the CAD model based on the type of fit required for each part.
+
+I plan to model all M3 heat-set insert holes using the insert's measured outer diameter plus approximately 0.1 mm, along with an additional 0.5 mm of depth.
+
+I currently plan to make dimensional adjustments directly in the CAD model instead of relying on slicer hole compensation.
+
+My planned print settings for small, high-stress components are a 0.16 mm layer height with 3–4 wall loops.
+
+Next steps
+
+Finish up %100 of the base and shoulder parts.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
