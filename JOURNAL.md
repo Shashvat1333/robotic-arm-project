@@ -187,11 +187,14 @@ Begin the CAD design for the elbow and wrist assemblies.
 
 **Day 4**: July 14, 2026
 
+
 Time spent: **3 hours**
+
 
 **What I worked on**
 
 Continued working on the CAD design and preparing the model for 3D printing. Most of today's work focused on researching tolerances and print settings for small, high-stress features such as gear teeth, heat-set insert holes, and press-fit joints. By the end of today's session, I estimate the CAD design is approximately 75% complete.
+
 
 **What I learned**
 
@@ -204,6 +207,7 @@ I researched proper techniques for installing heat-set inserts using a soldering
 I compared manually adjusting dimensions in CAD with using a slicer's hole compensation feature. Based on my research and the printer I plan to use, I currently intend to make dimensional adjustments directly in the CAD model because it provides more consistent and predictable results.
 
 I also researched print settings for small, detailed parts such as gears and servo brackets. Based on the recommendations I found, I currently plan to use a layer height of 0.16 mm with 3–4 wall loops to provide a good balance between print quality and part strength.
+
 
 **Decisions made**
 
@@ -218,5 +222,49 @@ My planned print settings for small, high-stress components are a 0.16 mm layer 
 Next steps
 
 Finish up %100 of the base and shoulder parts.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 5**: July 15, 2026
+
+
+Time spent: **2 hours**
+
+
+**What I worked on**
+
+Continued working on the CAD design for the robotic arm. Today's focus was on completing the base and shoulder components and beginning the assembly to better visualize how the individual parts fit together. Creating the assembly also helped me identify potential alignment issues and areas that may need adjustment before printing.
+
+
+**What I learned**
+
+I learned that it is important to verify design decisions against the manufacturer's recommendations instead of relying solely on general guidelines. After reviewing the specifications for the heat-set inserts I plan to use with PLA, I reduced the insert hole diameter from 4.6 mm to 4.4 mm to better match the recommended dimensions.
+
+Working with the assembly also gave me a better understanding of how the different components interact. Being able to see the parts together made it easier to identify areas that could interfere with movement or require additional clearance before manufacturing.
+
+While reviewing the completed parts, I also looked for potential weak points in the design. I added fillets to reduce stress concentrations around sharp corners and increased the thickness of several features that appeared likely to experience higher loads. Making these improvements during the design stage should help reduce the likelihood of failures or redesigns later in the project.
+
+
+**Decisions made**
+
+Completed the CAD design for the base and shoulder components.
+
+Began creating the full assembly to verify part placement and overall fit.
+
+Updated the M3 heat-set insert hole diameter from 4.6 mm to 4.4 mm based on the manufacturer's recommendations for PLA.
+
+Added fillets and reinforced several areas of the design to improve strength before printing.
+
+
+**Next steps**
+
+Continue building the full CAD assembly and verify that all components fit together correctly.
+
+Review the remaining parts for any additional weak points or areas that could benefit from reinforcement.
+
+Complete the remaining CAD components.
+
+
+<img width="532" height="653" alt="image" src="https://github.com/user-attachments/assets/c359f7c1-f972-4ee5-9dc3-7ed324049b32" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
