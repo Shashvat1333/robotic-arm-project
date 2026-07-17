@@ -1,5 +1,5 @@
 Robotic Arm Project Journal
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 1**: July 11, 2026
 
@@ -69,7 +69,7 @@ Decide the final joint layout and servo placement.
 
 Compare existing open-source robotic arms for design inspiration.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 2**: July 12, 2026
 
@@ -130,7 +130,7 @@ Design the joint brackets and servo mounts to accommodate M3 heat-set inserts.
 
 Verify the servo placement, clearances, and range of motion within the CAD assembly before printing the prototype.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 3**: July 13, 2026
 
@@ -183,7 +183,7 @@ Continue designing the shoulder joint once the base gear system has been validat
 
 Begin the CAD design for the elbow and wrist assemblies.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 4**: July 14, 2026
 
@@ -223,7 +223,7 @@ Next steps
 
 Finish up %100 of the base and shoulder parts.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 5**: July 15, 2026
 
@@ -267,4 +267,48 @@ Complete the remaining CAD components.
 
 <img width="532" height="653" alt="image" src="https://github.com/user-attachments/assets/c359f7c1-f972-4ee5-9dc3-7ed324049b32" />
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 6**: July 16, 2026
+
+
+Time spent: **5 hours**
+
+
+**What I worked on**
+
+Today I continued working on the CAD design for my robotic arm. I finished designing the shoulder arm and made several improvements to the base and shoulder components to strengthen the design and improve how the parts fit together.
+
+I also decided to use standard 25T servo arms for connecting the arm sections. To prepare for assembly, I created simple CAD models of the DS3230MG servo and a standard 25T servo arm. I then added these parts into the assembly to better visualize how the components would connect and move together.
+
+
+**What I learned**
+
+Today I learned more about the exact mounting specifications of the DS3230MG servo and its servo arm connection. I found the manufacturer's dimensions for the servo arm mounting pattern, which specifies a 25T, 5.9 mm spline along with mounting hole spacing of 20 mm, 4 mm, and 7.5 mm using M3 hardware.
+
+These measurements will help me design stronger bolt-on brackets in the future instead of having to recreate the servo spline geometry. Using the manufacturer's dimensions will make the connections more accurate and reliable.
+
+
+**Decisions made**
+
+Finished the CAD design for the shoulder arm.
+
+Made design changes to the base and shoulder components to improve strength and fit.
+
+Decided to use standard 25T servo arms for connecting the robotic arm sections.
+
+Created simple CAD models of the DS3230MG servo and 25T servo arm for the assembly.
+
+Decided to use the manufacturer's mounting dimensions when designing future brackets.
+
+
+**Next steps**
+
+Continue building the assembly by adding the remaining components.
+
+Continue designing the remaining parts of the robotic arm.
+
+
+<img width="452" height="578" alt="image" src="https://github.com/user-attachments/assets/1ee5cf7b-3e8b-4716-8505-d559b57e436b" />
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
