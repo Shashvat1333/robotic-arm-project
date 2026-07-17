@@ -312,3 +312,38 @@ Continue designing the remaining parts of the robotic arm.
 <img width="452" height="578" alt="image" src="https://github.com/user-attachments/assets/1ee5cf7b-3e8b-4716-8505-d559b57e436b" />
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 7**: July 17, 2026
+
+
+Time spent: **1.5 hours**
+
+
+**What I worked on**
+
+Continued working on the CAD design for the robotic arm. Today I spent time making changes to the shoulder base and shoulder arm to improve the overall design. I also continued building the assembly and completed a large portion of it, which helped me better visualize how the components fit together and identify any areas that may still need adjustment.
+
+
+**What I learned**
+
+Working with the assembly made it easier to evaluate how the different parts interact before manufacturing. Seeing the complete model helped me identify areas where the design could be improved and confirmed that the modified shoulder components fit properly within the overall assembly.
+
+Making adjustments during the CAD stage is much easier than modifying printed parts later, so reviewing the assembly as it develops is an important part of the design process.
+
+
+**Decisions made**
+
+Made additional design changes to the shoulder base and shoulder arm.
+
+Continued developing the full CAD assembly to verify part placement and overall fit.
+
+
+**Next steps**
+
+Complete the remaining CAD parts for the robotic arm.
+
+Finish the full assembly and verify that all components fit together correctly.
+
+<img width="662" height="695" alt="image" src="https://github.com/user-attachments/assets/795a2a8e-ebe6-418c-b2ff-691eb02d217c" />
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
