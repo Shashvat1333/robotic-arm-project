@@ -1,5 +1,5 @@
 Robotic Arm Project Journal
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 
 **Day 1**: July 11, 2026
 
@@ -69,7 +69,7 @@ Decide the final joint layout and servo placement.
 
 Compare existing open-source robotic arms for design inspiration.
 
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 
 **Day 2**: July 12, 2026
 
@@ -130,7 +130,7 @@ Design the joint brackets and servo mounts to accommodate M3 heat-set inserts.
 
 Verify the servo placement, clearances, and range of motion within the CAD assembly before printing the prototype.
 
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 
 **Day 3**: July 13, 2026
 
@@ -183,7 +183,7 @@ Continue designing the shoulder joint once the base gear system has been validat
 
 Begin the CAD design for the elbow and wrist assemblies.
 
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 
 **Day 4**: July 14, 2026
 
@@ -223,7 +223,7 @@ Next steps
 
 Finish up %100 of the base and shoulder parts.
 
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 
 **Day 5**: July 15, 2026
 
@@ -267,7 +267,7 @@ Complete the remaining CAD components.
 
 <img width="532" height="653" alt="image" src="https://github.com/user-attachments/assets/c359f7c1-f972-4ee5-9dc3-7ed324049b32" />
 
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 
 **Day 6**: July 16, 2026
 
@@ -311,7 +311,7 @@ Continue designing the remaining parts of the robotic arm.
 
 <img width="452" height="578" alt="image" src="https://github.com/user-attachments/assets/1ee5cf7b-3e8b-4716-8505-d559b57e436b" />
 
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
 
 **Day 7**: July 17, 2026
 
@@ -346,4 +346,43 @@ Finish the full assembly and verify that all components fit together correctly.
 
 <img width="662" height="695" alt="image" src="https://github.com/user-attachments/assets/795a2a8e-ebe6-418c-b2ff-691eb02d217c" />
 
------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+
+**Day 8**: July 18, 2026
+
+
+Time spent: **1 hour**
+
+
+**What I worked on**
+
+Continued working on the CAD design and assembly of the robotic arm. Today I decided to replace the remaining MG996R servos with DS3225MG servos after comparing their specifications. I also made several changes to the arm segments to reduce unnecessary material in low-stress areas while maintaining strength where it is most needed. By the end of today's work, the assembly was approximately 80% complete.
+
+
+**What I learned**
+
+I compared the specifications of the MG996R and DS3225MG servos and found that the DS3225MG provides approximately 25 kg·cm of torque, which is about twice the torque of the MG996R while also costing less. I also learned that the DS3225MG is waterproof and uses metal gears, making it a more durable option for the robotic arm.
+
+After reviewing the manufacturer specifications, I found that the DS3225MG shares similar body dimensions and mounting hole pattern to the MG996R. This means I can switch to the new servos without redesigning the existing brackets or modifying the CAD model.
+
+I also reviewed the arm segments and identified areas where material could be removed without affecting the structural strength of the design. Reducing unnecessary material in low-stress regions should decrease filament usage while maintaining strength around the joints and mounting locations.
+
+
+**Decisions made**
+
+Selected the DS3225MG servos as the current choice for the remaining joints in place of the MG996R servos.
+
+Revised the arm segment designs to reduce material usage in low-stress areas while maintaining strength around critical mounting points.
+
+
+**Next steps**
+
+Continue building the remaining CAD assembly.
+
+Complete reset of the Arm.
+
+
+<img width="553" height="692" alt="image" src="https://github.com/user-attachments/assets/d08b6537-2839-4456-b9ec-4a8b11e3e3be" />
+
+----------------------------------------------------------------------------------------------------------------------
+
