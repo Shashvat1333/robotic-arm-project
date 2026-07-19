@@ -386,3 +386,48 @@ Complete reset of the Arm.
 
 ----------------------------------------------------------------------------------------------------------------------
 
+**Day 6**: July 19, 2026
+
+
+Time spent: **4 hours**
+
+
+**What I worked on**
+
+Finished designing the wrist section of the robotic arm today. I also spent a significant amount of time researching different claw and gripper designs to determine which type would be most suitable for the project. In addition, I went back through several earlier CAD models to add details that I had previously missed, searched for accurate dimension sheets for various components, and worked on troubleshooting a gear meshing issue in the base assembly.
+
+
+**What I learned**
+
+I researched several different claw and gripper designs, including parallel jaw, two-finger, and three-finger grippers, to compare their advantages and disadvantages for picking up small and lightweight objects. I am still evaluating which design best fits the intended use of the robotic arm.
+
+I spent time searching for manufacturer drawings and dimension sheets for different components and found that measurements often varied between different sellers and sources. This made it more difficult than expected to obtain reliable dimensions and reinforced the importance of verifying measurements before finalizing CAD models.
+
+While reviewing earlier CAD models, I identified several details that I had forgotten to include, such as mounting features and clearances. This highlighted the importance of revisiting completed parts and checking them against the dimensions of the actual hardware before moving on to the next stage of the design.
+
+I also investigated a gear meshing issue in the base assembly. Although the gears used the same module and the theoretical center distance was correct, the gears still interfered with each other at certain rotation angles. I verified that the gear ratio, module, and axis alignment were all correct and determined that the center distance may be slightly too small. I began testing a wider center distance of approximately 31.7–32 mm to determine whether the additional clearance would eliminate the interference while also accounting for backlash and printing tolerances.
+
+
+**Decisions made**
+
+Completed the CAD design for the wrist section of the robotic arm.
+
+Continued researching claw and gripper designs before selecting a final end-effector design.
+
+Began testing a slightly larger gear center distance of approximately 31.7–32 mm to improve gear meshing and provide additional clearance.
+
+
+**Next steps**
+
+Continue testing the updated gear center distance to confirm that it resolves the meshing issue.
+
+Finalize the claw and gripper design.
+
+Continue designing the end effector in CAD.
+
+Review the remaining components to ensure that no mounting features, clearances, or dimensions were overlooked before completing the assembly.
+
+
+<img width="502" height="675" alt="image" src="https://github.com/user-attachments/assets/e0e0fb94-e6ad-4744-bd72-f3fe403ef239" />
+
+----------------------------------------------------------------------------------------------------------------------
