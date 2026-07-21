@@ -1,5 +1,5 @@
 Robotic Arm Project Journal
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 1**: July 11, 2026
 
@@ -69,7 +69,7 @@ Decide the final joint layout and servo placement.
 
 Compare existing open-source robotic arms for design inspiration.
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 2**: July 12, 2026
 
@@ -130,7 +130,7 @@ Design the joint brackets and servo mounts to accommodate M3 heat-set inserts.
 
 Verify the servo placement, clearances, and range of motion within the CAD assembly before printing the prototype.
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 3**: July 13, 2026
 
@@ -183,7 +183,7 @@ Continue designing the shoulder joint once the base gear system has been validat
 
 Begin the CAD design for the elbow and wrist assemblies.
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 4**: July 14, 2026
 
@@ -223,7 +223,7 @@ Next steps
 
 Finish up %100 of the base and shoulder parts.
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 5**: July 15, 2026
 
@@ -267,7 +267,7 @@ Complete the remaining CAD components.
 
 <img width="532" height="653" alt="image" src="https://github.com/user-attachments/assets/c359f7c1-f972-4ee5-9dc3-7ed324049b32" />
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 6**: July 16, 2026
 
@@ -311,7 +311,7 @@ Continue designing the remaining parts of the robotic arm.
 
 <img width="452" height="578" alt="image" src="https://github.com/user-attachments/assets/1ee5cf7b-3e8b-4716-8505-d559b57e436b" />
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 7**: July 17, 2026
 
@@ -346,7 +346,7 @@ Finish the full assembly and verify that all components fit together correctly.
 
 <img width="662" height="695" alt="image" src="https://github.com/user-attachments/assets/795a2a8e-ebe6-418c-b2ff-691eb02d217c" />
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 8**: July 18, 2026
 
@@ -384,7 +384,7 @@ Complete reset of the Arm.
 
 <img width="553" height="692" alt="image" src="https://github.com/user-attachments/assets/d08b6537-2839-4456-b9ec-4a8b11e3e3be" />
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 9**: July 19, 2026
 
@@ -430,4 +430,53 @@ Review the remaining components to ensure that no mounting features, clearances,
 
 <img width="502" height="675" alt="image" src="https://github.com/user-attachments/assets/e0e0fb94-e6ad-4744-bd72-f3fe403ef239" />
 
-----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 10**: July 20, 2026
+
+
+Time spent: **2 hours 25 minutes**
+
+
+**What I worked on**
+
+Focused entirely on designing the gripper for the robotic arm. After comparing several end-effector designs in previous sessions, I decided to use a parallel-jaw gripper for the final design.
+
+Most of today's work involved determining the best location for the servo inside the gripper housing and designing the gear mechanism that will transfer the servo's rotation into the opening and closing motion of the jaws. I also continued developing the gripper CAD model while ensuring the components fit together correctly.
+
+
+**What I learned**
+
+I decided that a parallel jaw gripper is the most suitable design for my project because it provides a simple and reliable way to grip small, lightweight objects.
+
+While designing the gripper, I found that servo placement plays an important role in the overall mechanism. Positioning the servo correctly is necessary to provide enough space for the gears and allow the jaws to move through their full range of motion without interference.
+
+I also designed the gear system that will drive the gripper. This required determining how the servo's rotational motion would be transferred to the jaws while keeping the mechanism compact enough to fit within the gripper housing.
+
+Throughout the design process, I continued verifying dimensions using the servo specifications to accurately position the output shaft and ensure the remaining components aligned correctly.
+
+
+**Decisions made**
+
+Selected the parallel jaw gripper as the final end-effector design.
+
+Decided to use a gear-driven mechanism to operate the gripper instead of a direct linkage.
+
+Continued refining the servo placement and gear layout within the gripper assembly.
+
+
+**Next steps**
+
+Finish the remaining CAD work for the gripper.
+
+Verify that the drive gears mesh correctly and make any necessary adjustments.
+
+Test the servo placement within the completed gripper assembly.
+
+Continue finalizing the complete robotic arm assembly.
+
+
+<img width="777" height="403" alt="image" src="https://github.com/user-attachments/assets/9c631fda-9832-400d-a7ec-c23c53df265e" />
+<img width="392" height="431" alt="image" src="https://github.com/user-attachments/assets/03b5c887-9fb7-4648-92c2-211ba3b7dfc2" />
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
