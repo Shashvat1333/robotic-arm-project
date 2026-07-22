@@ -430,7 +430,7 @@ Review the remaining components to ensure that no mounting features, clearances,
 
 <img width="502" height="675" alt="image" src="https://github.com/user-attachments/assets/e0e0fb94-e6ad-4744-bd72-f3fe403ef239" />
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 10**: July 20, 2026
 
@@ -478,5 +478,45 @@ Continue finalizing the complete robotic arm assembly.
 
 <img width="777" height="403" alt="image" src="https://github.com/user-attachments/assets/9c631fda-9832-400d-a7ec-c23c53df265e" />
 <img width="392" height="431" alt="image" src="https://github.com/user-attachments/assets/03b5c887-9fb7-4648-92c2-211ba3b7dfc2" />
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 11**: July 21, 2026
+
+
+Time spent: **4 hours**
+
+
+**What I worked on**
+
+Finished designing the gripper mechanism for the robotic arm. The final design uses a gear-driven parallelogram linkage that allows the jaws to remain parallel as they open and close. A large portion of today's work was spent troubleshooting issues within the assembly, but by the end of the session I had a fully functioning gripper mechanism.
+
+
+**What I learned**
+
+While testing the gear system, I learned that correct gear meshing depends not only on the gear dimensions but also on the rotational alignment of the teeth. I found that offsetting the gears by half of a tooth pitch allowed the teeth to mesh correctly instead of overlapping.
+
+I also discovered that an incorrect center distance can appear to be a gear alignment problem. After checking the gear dimensions, I found that my center distance was slightly smaller than the calculated value. Correcting it to 31.5 mm resolved the remaining interference between the gears.
+
+While assembling the four-bar linkage, I learned that adding unnecessary constraints can cause the assembly to become over-constrained. Once the linkage was built using the correct pivot locations and dimensions, the mechanism maintained its motion without requiring an additional parallel constraint.
+
+
+**Decisions made**
+
+Completed the final gripper mechanism using a gear-driven parallelogram linkage.
+
+Removed the unnecessary parallel constraint from the assembly.
+
+
+**Next steps**
+
+Address the remaining issues.
+
+Finish the complete robotic arm assembly.
+
+Continue testing the gripper to verify its full range of motion.
+
+
+https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
