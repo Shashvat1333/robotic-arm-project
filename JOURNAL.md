@@ -430,7 +430,7 @@ Review the remaining components to ensure that no mounting features, clearances,
 
 <img width="502" height="675" alt="image" src="https://github.com/user-attachments/assets/e0e0fb94-e6ad-4744-bd72-f3fe403ef239" />
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 10**: July 20, 2026
 
@@ -518,5 +518,45 @@ Continue testing the gripper to verify its full range of motion.
 
 
 https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 12**: July 23, 2026
+
+
+Time spent: **2 hours**
+
+
+**What I worked on**
+
+Finished troubleshooting the remaining issues in the robotic arm and completed the full CAD assembly. After making the final adjustments, I verified that the entire assembly functions correctly and that all of the major components fit together as intended.
+
+
+**What I learned**
+
+Completing the full assembly allowed me to evaluate the robotic arm as a system rather than testing each section individually. This made it easier to identify how changes in one component affected the rest of the design and confirmed that the base, shoulder, elbow, wrist, and gripper all operate together as expected.
+
+I also learned that completing the full assembly is an important step before manufacturing because it helps reveal any remaining alignment or interference issues that may not be obvious when parts are designed separately.
+
+
+**Decisions made**
+
+Completed and verified the full robotic arm assembly.
+
+Confirmed that the core mechanical design no longer requires any major redesigns.
+
+Shifted the project's focus from design work to final verification and refinement.
+
+
+**Next steps**
+
+Perform a final review of every part by comparing dimensions with the actual hardware specifications.
+
+Make any final adjustments that are identified during the review.
+
+Complete the bill of materials and calculate the final estimated project cost.
+
+
+<img width="1252" height="745" alt="image" src="https://github.com/user-attachments/assets/f61de71a-2e87-4aa4-85aa-c128c3cc569e" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
