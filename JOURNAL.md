@@ -521,7 +521,7 @@ https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**Day 12**: July 23, 2026
+**Day 12**: July 22, 2026
 
 
 Time spent: **2 hours**
@@ -558,5 +558,56 @@ Complete the bill of materials and calculate the final estimated project cost.
 
 
 <img width="1252" height="745" alt="image" src="https://github.com/user-attachments/assets/f61de71a-2e87-4aa4-85aa-c128c3cc569e" />
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 13**: July 23, 2026
+
+
+Time spent: **3 hours**
+
+
+**What I worked on**
+
+Today I focused on reviewing and improving my robotic arm design before continuing with assembly and simulation.
+
+I carefully inspected each CAD part to identify design mistakes, fitment issues, and potential weak points. After finding several areas that could be improved, I updated the affected parts to improve their fit, strength, and overall manufacturability.
+
+I also researched different methods for routing wires throughout the robotic arm. I planned to leave extra wire at each joint to provide enough slack for the servos to move through their full range of motion while reducing the risk of wires being pinched or snagged during operation.
+
+Finally, I began preparing the robotic arm for simulation by exporting the CAD assembly from Onshape using the **onshape-to-robot** exporter. During the export, I discovered that the assembly was detected with **0 degrees of freedom**, indicating that the assembly mates were not recognized as movable joints. I also found that some parts did not have material properties assigned, resulting in missing mass values. These issues will need to be corrected before the robotic arm can be successfully simulated in PyBullet.
+
+**What I learned**
+
+
+Today I learned that proper wire management is an important part of robotic arm design. Leaving enough slack at each joint allows the arm to move freely, while careful routing helps prevent wires from being stretched, pinched, or damaged during operation.
+
+I also learned that simulation software relies on a correctly constrained CAD assembly. If revolute joints are not properly defined, the exporter cannot generate a movable robot model. In addition, assigning material properties is necessary because the simulator uses them to calculate realistic mass and physical behavior.
+
+
+**Decisions made**
+
+Reviewed every CAD part and corrected several design issues.
+
+Improved the design by refining part geometry and fitment.
+
+Decided to leave extra wire at each joint to allow for the arm's full range of motion.
+
+Began preparing the robotic arm for simulation using the **onshape-to-robot** exporter.
+
+Decided to correct the assembly mates and assign material properties before continuing with simulation.
+
+
+**Next steps**
+
+Correct the assembly mates so all movable joints are recognized correctly.
+
+Assign material properties to every CAD part.
+
+Export the updated robotic arm again and test it in PyBullet.
+
+Continue refining the CAD model based on the simulation results.
+
+<img width="370" height="750" alt="image" src="https://github.com/user-attachments/assets/df353599-1760-4c87-a56d-3c538e7c4aa8" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
