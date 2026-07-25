@@ -611,3 +611,47 @@ Continue refining the CAD model based on the simulation results.
 <img width="370" height="750" alt="image" src="https://github.com/user-attachments/assets/df353599-1760-4c87-a56d-3c538e7c4aa8" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 14**: July 24, 2026
+
+
+Time spent: **2.5 hours**
+
+
+**What I worked on**
+
+Today I focused on creating an animation demo of my robotic arm so I could better understand how the different joints move together and how the mechanism behaves before building the final version.
+
+At first, I thought creating the animation would be straightforward, but I quickly realized it was much more complicated than expected. I explored several different methods, including exporting my CAD model to a URDF file for simulation in PyBullet. I researched the complete workflow, including installing the required Python packages, generating the URDF from Onshape, and controlling the robot joints through Python scripts.
+
+While testing this approach, I discovered that my assembly was not exporting correctly because the software detected **0 degrees of freedom**, meaning the joints were not being recognized properly. I also found that some parts were missing material properties, which would prevent accurate physics simulation.
+
+After experimenting with different options, I decided to use **Gear Relations** in Onshape instead. By linking the joints together with a gear relation, I was able to animate multiple parts of the robotic arm using a single animation. This gave me a simple way to demonstrate the movement of the arm without having to build a full physics simulation.
+
+
+**What I learned**
+
+Today I learned that creating robotic animations is much more involved than simply exporting a CAD model. Simulation software such as PyBullet requires a properly constrained assembly with correctly defined joints and mass properties before realistic movement can be generated.
+
+I also learned how Onshape's **Gear Relation** feature can synchronize the motion of multiple gears, allowing several components to move together from a single driving joint. This provides a quick and effective way to demonstrate the robot's motion while the full simulation is still being developed.
+
+
+**Decisions made**
+
+Decided to use Onshape's Gear Relation feature to create the animation instead.
+
+Successfully created a multi-part animation driven by a single animated joint.
+
+
+**Next steps**
+
+Continue improving the CAD assembly and joint definitions.
+
+Finish the remaining CAD work and prepare the robotic arm for 3D printing.
+
+Create a checklist for all the parts and an estimated cost.
+
+
+<img width="1096" height="718" alt="Main Arm" src="https://github.com/user-attachments/assets/517648e7-f72f-484d-bfb2-2633fb299878" />
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
