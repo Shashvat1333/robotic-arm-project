@@ -655,3 +655,48 @@ Create a checklist for all the parts and an estimated cost.
 <img width="1096" height="718" alt="Main Arm" src="https://github.com/user-attachments/assets/517648e7-f72f-484d-bfb2-2633fb299878" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 15**: July 26, 2026
+
+
+Time spent: **2 hours 30 minutes**
+
+
+**What I worked on**
+
+Today I finalized my bill of materials  and parts checklist for the robotic arm project. I reviewed every component to make sure nothing was missing. I also replaced several of my original Amazon.com items with Amazon.ca equivalents to reduce shipping costs and avoid unnecessary import fees where possible.
+
+As part of my review, I added a missing safety component to my electrical system: a 5x20mm inline fuse holder and glass fuse kit to protect the ESP32. I also verified that all of my major components were included in the BOM, including the DS3225MG servos, MG90S servos, ESP32, power supply, wiring, breadboard, heat-set inserts, PLA+ filament, and other required hardware.
+
+
+**What I learned**
+
+Today I confirmed that 22 AWG solid-core wire is compatible with standard breadboards and can be inserted directly without additional connectors. I also confirmed that the Canadian MG90S servo options have the same dimensions as the original servos I planned to use, meaning my CAD design will not need any changes.
+
+I learned that some inexpensive "MG" servos only have metal gears for part of the gearbox, while the remaining gears may still be plastic. Although this is acceptable for my lightweight robotic arm, it is worth considering for future projects requiring greater durability.
+
+I also confirmed the servo shaft dimensions and reviewed my electrical system, learning that the inline fuse should be connected to the ESP32's VIN line rather than the shared servo power rail to avoid nuisance fuse failures caused by normal servo current draw.
+
+
+**Decisions made**
+
+Finalized the complete bill of materials for the robotic arm.
+
+Replaced several Amazon.com parts with Amazon.ca equivalents.
+
+Added a 5x20mm inline fuse holder and glass fuse kit to protect the ESP32.
+
+Confirmed all major components have been sourced and accounted for.
+
+Estimated the total project cost to be approximately **$257.10 CAD**, including estimated import charges.
+
+
+**Next steps**
+
+Make the final improvements to the CAD assembly.
+
+Apply for the grant needed to fund the project.
+
+Begin the physical build once the grant gets approved and the parts arrive, starting with mechanical assembly, followed by wiring, calibration, and programming.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
