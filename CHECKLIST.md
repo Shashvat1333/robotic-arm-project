@@ -8,7 +8,8 @@
 - [x] [KADRICK 420PCS M3 Heat Set Inserts Kit](https://www.amazon.com/Threaded-Assortment-M3x6-30mm-Installation-Printing/dp/B0GYRQG7F2) — $25.48 CAD (with tax)
 - [x] [Mini Breadboard](https://www.amazon.ca/MMOBIEL-Solderless-Breadboard-Prototype-Circuit/dp/B0CPJRSLDX) — $7.90 CAD (with tax)
 - [x] [ELEGOO Rapid PLA Plus Filament 1.75mm Black 1KG](https://www.amazon.ca/ELEGOO-Filament-Toughness-Dimensional-Cardboard/dp/B0CLLY9CBN) — $23.38 CAD (with tax)
+- [x] [Fuse Kit (5x20mm Inline Holders + Assorted Glass Fuses)](https://www.amazon.ca/BeiLan-5x20mm-Inline-Fast-Blow-Assorted/dp/B07X8WL5TC) — $16.94 CAD (with tax)
 
-**Import charge:** ~$20.41 CAD
+**Import charge:** ~$20.91 CAD
 
-**Total: ~$239.66 CAD**
+**Total: ~$257.10 CAD**
