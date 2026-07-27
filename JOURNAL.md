@@ -700,3 +700,45 @@ Apply for the grant needed to fund the project.
 Begin the physical build once the grant gets approved and the parts arrive, starting with mechanical assembly, followed by wiring, calibration, and programming.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 16**: July 27, 2026
+
+
+Time spent: **1 hour 47 min**
+
+
+**What I worked on**
+
+Today I continued improving my robotic arm CAD assembly by adding more realistic mechanical details. The M3 screw holes and brass heat-set insert mounting points were already designed, but I created CAD models of the M3 screws and brass heat-set inserts and added them into the assembly.
+
+Adding these hardware components helped make the assembly more realistic and allowed me to better visualize how the parts will be connected during the final build.
+
+
+**What I learned**
+
+While adding the screws and inserts into the assembly, I found a few small design issues that were not obvious before. Including the hardware models helped me double-check clearances, mounting locations, and part fits.
+
+I fixed these issues before printing, preventing possible assembly problems later. I also confirmed that the current design improvements were enough without needing a major redesign.
+
+
+**Decisions made**
+
+Finalized the M3 screw and brass insert hardware details in the CAD assembly.
+
+Added realistic hardware models to better visualize the final robotic arm build.
+
+
+**Next steps**
+
+Apply for the Stardance grant once the application system is available again.
+
+Submit the design application when the form is working.
+
+Order the parts after confirming the budget.
+
+Begin the physical build once the parts arrive.
+
+
+<img width="553" height="266" alt="image" src="https://github.com/user-attachments/assets/9301283e-7855-48a1-abfd-7b75c069d0c7" />
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
