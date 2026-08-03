@@ -93,8 +93,10 @@ Next: confirm the wider center distance works, finalize the gripper design, keep
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Day 10: July 20, 2026
-Time spent: 2 hours 25 minutes
+**Day 10**: July 20, 2026
+
+Time spent: **2 hours 25 minutes**
+
 Locked in the parallel jaw gripper design and spent most of the day figuring out where to put the servo inside the housing and designing the gear mechanism that turns the servo rotation into the jaw movement. Servo placement mattered a lot more than I expected, get it wrong and there's no room for the gears or the jaws can't move properly.
 Next: finish the gripper CAD, check that the drive gears mesh correctly, test the servo placement. 
 
