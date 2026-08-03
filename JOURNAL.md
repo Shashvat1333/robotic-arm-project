@@ -3,267 +3,46 @@ Robotic Arm Project Journal
 
 **Day 1**: July 11, 2026
 
-
 Time spent: **2 hours**
 
-
-**What I worked on**
-
-Started planning my robotic arm project today. I focused mainly on research, understanding the requirements, and making early design decisions before doing anything else.
-
-I researched the fundamentals of degrees of freedom (DOF) and compared different robotic arm designs with 3, 4, 5, and 6 DOF. More DOF allows greater control over the end effector's position and orientation, but it also increases complexity, cost, programming difficulty, and possible error buildup because small inaccuracies in each joint can affect the final position.
-
-Based on my initial research, I am currently planning to build a 6 DOF robotic arm because it provides more flexibility and allows the arm to perform more complex movements. However, I will confirm this decision after completing more mechanical design research and torque calculations.
-
-
-**What I learned**
-
-I learned about the difference between open-loop and closed-loop servos. Closed-loop servos use position feedback from sensors such as encoders, which improves accuracy and reduces positioning errors across multiple joints. However, they are significantly more expensive. Since my planned payload is light, less than 500g, I am currently considering open-loop PWM servos as a better balance between cost and performance for a first robotic arm.
-
-I researched how servo torque requirements change depending on the location of the joint. Joints closer to the base require more torque because they support the weight of the entire arm, while joints farther away require less torque. My current plan is to investigate using higher-torque servos, such as the MG996R, for major joints like the base, shoulder, elbow, and wrist. Lower torque servos such as the MG90S may be better suited for lighter joints like wrist rotation and the gripper.
-
-I compared Arduino and ESP32 as possible controllers. I am currently leaning toward using an ESP32 because it includes built-in WiFi, which would allow me to control the robotic arm remotely through a phone-based interface. I also learned that the ESP32 uses 3.3V logic and may require different libraries compared to Arduino boards, such as ESP32Servo.h.
-
-I learned that multiple servos cannot be powered directly from a microcontroller because they can draw more current than the board can provide. A separate power supply will likely be needed for the servos, with a shared ground connection between the power supply and the ESP32.
-
-I researched possible materials for the robotic arm frame. PLA is currently my preferred option because it is affordable, easy to print, and should be strong enough for an initial lightweight prototype. I will continue researching whether stronger materials or different printing settings are needed for areas experiencing higher stress.
-
-
-**Decisions made**
-
-My current design direction is a 6 DOF robotic arm, although this may change after.
-
-I am currently considering open-loop PWM servos because they provide a better balance between cost and performance for this project.
-
-I am planning to compare MG996R and MG90S servo combinations depending on the torque requirements of each joint.
-
-I am planning to use an ESP32 as the main controller because of its built-in WiFi capabilities.
-
-I am planning to use an external power supply for the servos instead of powering them directly from the controller.
-
-I am considering PLA for the frame.
-
-
-**Questions to investigate**
-
-Are the selected servos strong enough for the planned arm length and payload?
-
-Will PLA provide sufficient strength for the highest-stress joints?
-
-Should I use bearings or other mechanical supports to reduce friction?
-
-How can I reduce servo vibration and backlash?
-
-Is a 6 DOF design practical for my first robotic arm build?
-
-
-**Next steps**
-
-Create a detailed Bill of Materials with estimated prices.
-
-Research servo specifications and calculate torque requirements.
-
-Begin initial CAD sketches for the arm structure.
-
-Decide the final joint layout and servo placement.
-
-Compare existing open-source robotic arms for design inspiration.
+Started planning the robotic arm today, mostly research before touching CAD. Compared 3, 4, 5, and 6 DOF designs, and I'm currently leaning toward 6 DOF since it gives more flexibility, even though it adds complexity. Looked into open-loop vs closed-loop servos and decided open-loop PWM should be fine since my payload is under 500g. Also learned torque needs go up the closer a joint is to the base, so I'm planning stronger servos like the MG996R for the base and shoulder and weaker ones like the MG90S for the wrist and gripper. Picked the ESP32 over Arduino mainly because of the built-in WiFi.
+Next: build a BOM, calculate real torque numbers, start early CAD sketches.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 2**: July 12, 2026
 
-
 Time spent: **2.5 hours**
 
-
-**What I worked on**
-
-Focused today on refining the torque calculations for the robotic arm and updating my preliminary Bill of Materials (BOM).
-
-Using my planned arm length of approximately 42 cm, I recalculated the shoulder torque requirements with a realistic payload of 100 g, which is the maximum weight I currently expect the arm to lift. I estimated the total weight beyond the shoulder joint, including the elbow, wrist, gripper servos, the printed structure, and the payload, then calculated the required torque at full horizontal extension.
-
-
-**What I learned**
-
-Using a 42 cm arm length and a 100 g payload, I calculated that the shoulder joint would require approximately 15.4 kg·cm of torque. This is beyond what a standard MG996R servo, rated at roughly 11–13 kg·cm, can reliably provide with a comfortable safety margin. Based on these calculations, the base and shoulder joints require higher-torque servos.
-
-I researched higher-torque servo options and selected the HOOYIJ DS3230MG as my current choice for the base and shoulder joints. According to the manufacturer's specifications, it provides approximately 29.5 kg·cm at 5 V and up to 34.5 kg·cm at 6.8 V, giving a comfortable safety margin for my current design.
-
-My current planned servo configuration is:
-
-2 × HOOYIJ DS3230MG for the base and shoulder
-
-2 × Deegoo MG996R for the elbow and wrist pitch
-
-2 × MG90S for the wrist roll and gripper
-
-Based on my calculations, the MG90S servos appear suitable for the wrist roll and gripper because these joints have a much shorter lever arm of approximately 5–8 cm. The estimated torque requirement is about 0.84 kg·cm, which is well below the servo's rated torque.
-
-I learned that servo movement can be limited in software using the `constrain()` function before sending a position command. Although the DS3230MG supports approximately 270° of rotation, I currently plan to limit it to 180° because the extra range is not required for this design.
-
-I researched bearing-supported joints, including two-sided U-mount brackets, as a way to reduce the structural load placed on servo output shafts. Because this is a lightweight prototype, I currently plan to build without them and evaluate whether they are needed after testing.
-
-I also reviewed the expected power requirements. Although all six servos are unlikely to stall simultaneously during normal operation, the theoretical worst-case current draw could reach approximately 9–13 A. Based on this, I updated my planned power supply from a 5 V 6 A adapter to a 5 V 10 A (50 W) power supply to provide additional headroom.
-
-I watched several videos of existing robotic arm projects to study different design approaches and gather ideas for my own build. I paid particular attention to joint layouts, servo placement, bracket design, wire management, and overall mechanical structure. This helped me identify features that may be useful to incorporate into my own design while avoiding common design issues.
-
-
-**Decisions made**
-
-My current planned servo configuration consists of two DS3230MG servos for the base and shoulder, two MG996R servos for the elbow and wrist pitch, and two MG90S servos for the wrist roll and gripper.
-
-I set my design payload target to approximately 100 g because it better reflects the lightweight objects I intend the robotic arm to manipulate.
-
-I selected a 5 V 10 A BTF-LIGHTING power supply instead of the originally planned 6 A version.
-
-I added M3 heat-set inserts and an M3 screw kit to the preliminary Bill of Materials for mounting servos and brackets into PLA components.
-
-I also added one 1 kg spool of Elegoo PLA filament to the Bill of Materials.
-
-
-**Next steps**
-
-Begin designing the robotic arm frame in CAD using the planned dimensions and selected servo sizes.
-
-Design the joint brackets and servo mounts to accommodate M3 heat-set inserts.
-
-Verify the servo placement, clearances, and range of motion within the CAD assembly before printing the prototype.
+Ran actual torque numbers today. With a 42cm arm and 100g payload, the shoulder needs about 15.4 kg cm of torque, which is more than a standard MG996R can handle comfortably. Switched the base and shoulder servos to the DS3230MG since it gives a lot more headroom. Updated my planned lineup to two DS3230MG for base and shoulder, two MG996R for elbow and wrist pitch, and two MG90S for wrist roll and gripper. Also bumped my power supply up to 5V 10A after realizing worst-case current draw could hit 9 to 13A.
+Next: finish the BOM, design brackets for the heat set inserts, check clearances before printing anything.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 3**: July 13, 2026
 
-
 Time spent: **4 hours 30 minutes**
 
-
-**What I worked on**
-
-Started the CAD design for the robotic arm today, focusing on the base and shoulder assembly. Most of my time was spent designing and understanding the gear system for the base because I wanted to achieve a full 360° rotation using a 270° positional servo instead of switching to a continuous rotation servo or adding a slip ring.
-
-
-**What I learned**
-
-I worked through the relationship between gear ratios and rotational movement. To achieve 360° of platform rotation from a servo capable of rotating 270°, I calculated that a 3:4 step-up gear ratio would provide the required motion.
-
-I learned that gears must have the same module to mesh correctly. Matching the overall diameter alone is not enough because the tooth size and spacing must also be identical.
-
-During the design process, I discovered that my initial gear sizes of 6 and 8 teeth were too small and would not mesh properly due to interference between the teeth. To solve this, I increased the gear sizes to 18 and 24 teeth while maintaining the same 3:4 ratio, resulting in a much more practical gear set.
-
-I used Onshape's Spur Gear FeatureScript to generate accurate involute gears instead of drawing the tooth profiles manually. I also learned how to use the Boolean Union tool to combine multiple solid bodies into a single part.
-
-While working in the assembly environment, I learned how to use Revolute Mates to define rotational motion and Gear Relations to link two gears together so they rotate correctly relative to one another.
-
-I also learned about backlash in 3D-printed gears. Even when the CAD model is mathematically correct, printing tolerances can cause gears to bind if there is no clearance. Because of this, I researched how small adjustments to the center distance can improve gear performance.
-
-For my current 18-tooth and 24-tooth gear set with a module of 1.5, the calculated center distance is 31.5 mm. I currently plan to increase this slightly to approximately 31.7–31.8 mm to account for FDM printing tolerances and reduce the likelihood of binding.
-
-I also watched several videos demonstrating gear design and robotic arm mechanisms. These helped me better understand practical gear layouts, assembly techniques, and common design considerations before continuing with my own CAD model.
-
-
-**Decisions made**
-
-My current design uses a 270° DS3230MG servo with a 3:4 step-up gear ratio to achieve approximately 360° of base rotation.
-
-My current gear design uses an 18-tooth driving gear and a 24-tooth driven gear with a module of 1.5.
-
-I currently plan to use a center distance of approximately 31.7–31.8 mm to provide additional clearance for 3D printing.
-
-Based on my current torque calculations, the reduction in output torque caused by the gear ratio remains acceptable for my planned payload.
-
-
-**Next steps**
-
-Finish the CAD design for the base gear housing and rotating platform.
-
-Print and test the gear pair to verify that the selected center distance provides smooth rotation without excessive backlash or binding.
-
-Continue designing the shoulder joint once the base gear system has been validated.
-
-Begin the CAD design for the elbow and wrist assemblies.
+Started actual CAD today, focused mostly on the base gear system. I wanted full 360 rotation out of a 270-degree servo instead of adding a slip ring, and worked out that a 3 to 4 step up gear ratio would do it. My first gear sizes were too small, and the teeth interfered with each other, so I bumped them up to 18 and 24 teeth using the same ratio, and that fixed it. Learned a lot about using Onshape's gear tools and Revolute Mates to get the assembly moving correctly. Also planning to pad the center distance slightly to account for printing tolerances.
+Next: finish the base gear housing, print and test the gear pair, then move on to the shoulder.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 4**: July 14, 2026
 
-
 Time spent: **3 hours**
 
-
-**What I worked on**
-
-Continued working on the CAD design and preparing the model for 3D printing. Most of today's work focused on researching tolerances and print settings for small, high-stress features such as gear teeth, heat-set insert holes, and press-fit joints. By the end of today's session, I estimate the CAD design is approximately 75% complete.
-
-
-**What I learned**
-
-I researched recommended clearances for different types of fits used in 3D printing. A clearance of approximately 0.1 mm is commonly recommended for press-fit parts, while 0.2–0.3 mm provides a smoother moving fit and 0.4–0.5 mm creates a looser fit. Using clearances that are too small can cause parts to fuse together or become difficult to assemble after printing.
-
-I learned how to size holes for M3 heat-set inserts. Based on the insert dimensions I plan to use, the hole should be approximately 0.1 mm larger than the measured outer diameter of the insert, with about 0.5 mm of additional depth so the insert can sit flush once installed.
-
-I researched proper techniques for installing heat-set inserts using a soldering iron. Maintaining a temperature of approximately 200–220°C and applying steady downward pressure helps produce a cleaner installation. I also learned that excessive movement while removing the soldering iron or using an undersized hole can cause excess plastic to build up around the insert instead of leaving a clean, flush surface.
-
-I compared manually adjusting dimensions in CAD with using a slicer's hole compensation feature. Based on my research and the printer I plan to use, I currently intend to make dimensional adjustments directly in the CAD model because it provides more consistent and predictable results.
-
-I also researched print settings for small, detailed parts such as gears and servo brackets. Based on the recommendations I found, I currently plan to use a layer height of 0.16 mm with 3–4 wall loops to provide a good balance between print quality and part strength.
-
-
-**Decisions made**
-
-I plan to standardize the clearances used throughout the CAD model based on the type of fit required for each part.
-
-I plan to model all M3 heat-set insert holes using the insert's measured outer diameter plus approximately 0.1 mm, along with an additional 0.5 mm of depth.
-
-I currently plan to make dimensional adjustments directly in the CAD model instead of relying on slicer hole compensation.
-
-My planned print settings for small, high-stress components are a 0.16 mm layer height with 3–4 wall loops.
-
-Next steps
-
-Finish up %100 of the base and shoulder parts.
+Spent today researching print tolerances to get the base and shoulder parts ready for actual printing. CAD for the shoulder and base parts is now roughly 75% complete. Looked into clearance rules for press fit and moving parts, and figured out proper hole sizing for the M3 heat set inserts. Also researched how to install the inserts properly with a soldering iron without making a mess around them. Settled on doing dimensional adjustments directly in CAD instead of relying on the slicer, and picked print settings for the smaller detailed parts.
+Next: finish the base and shoulder parts completely.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 5**: July 15, 2026
 
-
 Time spent: **2 hours**
 
-
-**What I worked on**
-
-Continued working on the CAD design for the robotic arm. Today's focus was on completing the base and shoulder components and beginning the assembly to better visualize how the individual parts fit together. Creating the assembly also helped me identify potential alignment issues and areas that may need adjustment before printing.
-
-
-**What I learned**
-
-I learned that it is important to verify design decisions against the manufacturer's recommendations instead of relying solely on general guidelines. After reviewing the specifications for the heat-set inserts I plan to use with PLA, I reduced the insert hole diameter from 4.6 mm to 4.4 mm to better match the recommended dimensions.
-
-Working with the assembly also gave me a better understanding of how the different components interact. Being able to see the parts together made it easier to identify areas that could interfere with movement or require additional clearance before manufacturing.
-
-While reviewing the completed parts, I also looked for potential weak points in the design. I added fillets to reduce stress concentrations around sharp corners and increased the thickness of several features that appeared likely to experience higher loads. Making these improvements during the design stage should help reduce the likelihood of failures or redesigns later in the project.
-
-
-**Decisions made**
-
-Completed the CAD design for the base and shoulder components.
-
-Began creating the full assembly to verify part placement and overall fit.
-
-Updated the M3 heat-set insert hole diameter from 4.6 mm to 4.4 mm based on the manufacturer's recommendations for PLA.
-
-Added fillets and reinforced several areas of the design to improve strength before printing.
-
-
-**Next steps**
-
-Continue building the full CAD assembly and verify that all components fit together correctly.
-
-Review the remaining parts for any additional weak points or areas that could benefit from reinforcement.
-
-Complete the remaining CAD components.
-
+Finished the base and shoulder components and started building the full assembly to see how everything actually fits together. Caught a small mistake where my insert hole size was slightly off from the manufacturer spec and fixed it. Seeing everything together made it a lot easier to spot interference issues that weren't obvious when parts were designed separately. Added some fillets and reinforced a few areas that looked like they'd crack under load.
+Next: keep building the assembly, check remaining parts for weak spots, finish the rest of the CAD.
 
 <img width="532" height="653" alt="image" src="https://github.com/user-attachments/assets/c359f7c1-f972-4ee5-9dc3-7ed324049b32" />
 
@@ -271,43 +50,10 @@ Complete the remaining CAD components.
 
 **Day 6**: July 16, 2026
 
-
 Time spent: **5 hours**
 
-
-**What I worked on**
-
-Today I continued working on the CAD design for my robotic arm. I finished designing the shoulder arm and made several improvements to the base and shoulder components to strengthen the design and improve how the parts fit together.
-
-I also decided to use standard 25T servo arms for connecting the arm sections. To prepare for assembly, I created simple CAD models of the DS3230MG servo and a standard 25T servo arm. I then added these parts into the assembly to better visualize how the components would connect and move together.
-
-
-**What I learned**
-
-Today I learned more about the exact mounting specifications of the DS3230MG servo and its servo arm connection. I found the manufacturer's dimensions for the servo arm mounting pattern, which specifies a 25T, 5.9 mm spline along with mounting hole spacing of 20 mm, 4 mm, and 7.5 mm using M3 hardware.
-
-These measurements will help me design stronger bolt-on brackets in the future instead of having to recreate the servo spline geometry. Using the manufacturer's dimensions will make the connections more accurate and reliable.
-
-
-**Decisions made**
-
-Finished the CAD design for the shoulder arm.
-
-Made design changes to the base and shoulder components to improve strength and fit.
-
-Decided to use standard 25T servo arms for connecting the robotic arm sections.
-
-Created simple CAD models of the DS3230MG servo and 25T servo arm for the assembly.
-
-Decided to use the manufacturer's mounting dimensions when designing future brackets.
-
-
-**Next steps**
-
-Continue building the assembly by adding the remaining components.
-
-Continue designing the remaining parts of the robotic arm.
-
+Finished the shoulder arm and made some strength improvements to the base and shoulder parts. Decided to use standard 25T servo arms instead of designing custom connectors, so I made quick models of the DS3230MG and a 25T arm to check the fit in the assembly. Found the actual manufacturer mounting dimensions for the servo, which should make future brackets a lot more accurate.
+Next: keep adding parts to the assembly and keep designing the rest of the arm.
 
 <img width="452" height="578" alt="image" src="https://github.com/user-attachments/assets/1ee5cf7b-3e8b-4716-8505-d559b57e436b" />
 
@@ -315,34 +61,10 @@ Continue designing the remaining parts of the robotic arm.
 
 **Day 7**: July 17, 2026
 
-
 Time spent: **1.5 hours**
 
-
-**What I worked on**
-
-Continued working on the CAD design for the robotic arm. Today I spent time making changes to the shoulder base and shoulder arm to improve the overall design. I also continued building the assembly and completed a large portion of it, which helped me better visualize how the components fit together and identify any areas that may still need adjustment.
-
-
-**What I learned**
-
-Working with the assembly made it easier to evaluate how the different parts interact before manufacturing. Seeing the complete model helped me identify areas where the design could be improved and confirmed that the modified shoulder components fit properly within the overall assembly.
-
-Making adjustments during the CAD stage is much easier than modifying printed parts later, so reviewing the assembly as it develops is an important part of the design process.
-
-
-**Decisions made**
-
-Made additional design changes to the shoulder base and shoulder arm.
-
-Continued developing the full CAD assembly to verify part placement and overall fit.
-
-
-**Next steps**
-
-Complete the remaining CAD parts for the robotic arm.
-
-Finish the full assembly and verify that all components fit together correctly.
+Made more changes to the shoulder base and arm and kept building out the assembly. Nothing too dramatic today, mostly just confirming everything still fits properly once I could see it all together. Reminded me again that catching problems in CAD is a lot easier than catching them after printing.
+Next: finish the remaining CAD parts and confirm the full assembly fits.
 
 <img width="662" height="695" alt="image" src="https://github.com/user-attachments/assets/795a2a8e-ebe6-418c-b2ff-691eb02d217c" />
 
@@ -350,37 +72,10 @@ Finish the full assembly and verify that all components fit together correctly.
 
 **Day 8**: July 18, 2026
 
-
 Time spent: **1 hour**
 
-
-**What I worked on**
-
-Continued working on the CAD design and assembly of the robotic arm. Today I decided to replace the remaining MG996R servos with DS3225MG servos after comparing their specifications. I also made several changes to the arm segments to reduce unnecessary material in low-stress areas while maintaining strength where it is most needed. By the end of today's work, the assembly was approximately 80% complete.
-
-
-**What I learned**
-
-I compared the specifications of the MG996R and DS3225MG servos and found that the DS3225MG provides approximately 25 kg·cm of torque, which is about twice the torque of the MG996R while also costing less. I also learned that the DS3225MG is waterproof and uses metal gears, making it a more durable option for the robotic arm.
-
-After reviewing the manufacturer specifications, I found that the DS3225MG shares similar body dimensions and mounting hole pattern to the MG996R. This means I can switch to the new servos without redesigning the existing brackets or modifying the CAD model.
-
-I also reviewed the arm segments and identified areas where material could be removed without affecting the structural strength of the design. Reducing unnecessary material in low-stress regions should decrease filament usage while maintaining strength around the joints and mounting locations.
-
-
-**Decisions made**
-
-Selected the DS3225MG servos as the current choice for the remaining joints in place of the MG996R servos.
-
-Revised the arm segment designs to reduce material usage in low-stress areas while maintaining strength around critical mounting points.
-
-
-**Next steps**
-
-Continue building the remaining CAD assembly.
-
-Complete reset of the Arm.
-
+Swapped the remaining MG996R servos for the DS3225MG since it gives roughly double the torque for less money and is waterproof with metal gears. Turns out the mounting pattern is basically the same, so I didn't need to redesign any brackets. Also trimmed some unnecessary material out of low-stress arm segments to save filament. Assembly is around 80% done now.
+Next: keep building out the rest of the assembly and clean up the arm CAD.
 
 <img width="553" height="692" alt="image" src="https://github.com/user-attachments/assets/d08b6537-2839-4456-b9ec-4a8b11e3e3be" />
 
@@ -388,93 +83,20 @@ Complete reset of the Arm.
 
 **Day 9**: July 19, 2026
 
-
 Time spent: **4 hours**
 
-
-**What I worked on**
-
-Finished designing the wrist section of the robotic arm today. I also spent a significant amount of time researching different claw and gripper designs to determine which type would be most suitable for the project. In addition, I went back through several earlier CAD models to add details that I had previously missed, searched for accurate dimension sheets for various components, and worked on troubleshooting a gear meshing issue in the base assembly.
-
-
-**What I learned**
-
-I researched several different claw and gripper designs, including parallel jaw, two-finger, and three-finger grippers, to compare their advantages and disadvantages for picking up small and lightweight objects. I am still evaluating which design best fits the intended use of the robotic arm.
-
-I spent time searching for manufacturer drawings and dimension sheets for different components and found that measurements often varied between different sellers and sources. This made it more difficult than expected to obtain reliable dimensions and reinforced the importance of verifying measurements before finalizing CAD models.
-
-While reviewing earlier CAD models, I identified several details that I had forgotten to include, such as mounting features and clearances. This highlighted the importance of revisiting completed parts and checking them against the dimensions of the actual hardware before moving on to the next stage of the design.
-
-I also investigated a gear meshing issue in the base assembly. Although the gears used the same module and the theoretical center distance was correct, the gears still interfered with each other at certain rotation angles. I verified that the gear ratio, module, and axis alignment were all correct and determined that the center distance may be slightly too small. I began testing a wider center distance of approximately 31.7–32 mm to determine whether the additional clearance would eliminate the interference while also accounting for backlash and printing tolerances.
-
-
-**Decisions made**
-
-Completed the CAD design for the wrist section of the robotic arm.
-
-Continued researching claw and gripper designs before selecting a final end-effector design.
-
-Began testing a slightly larger gear center distance of approximately 31.7–32 mm to improve gear meshing and provide additional clearance.
-
-
-**Next steps**
-
-Continue testing the updated gear center distance to confirm that it resolves the meshing issue.
-
-Finalize the claw and gripper design.
-
-Continue designing the end effector in CAD.
-
-Review the remaining components to ensure that no mounting features, clearances, or dimensions were overlooked before completing the assembly.
+Finished the wrist section today and spent a good amount of time comparing gripper designs, still deciding between a few options. Found out dimension sheets for the same part can vary a lot between sellers, so I can't just trust one source. Went back through some older CAD parts and found details I'd missed earlier. Also ran into a weird gear meshing issue in the base where everything checked out on paper but the gears still interfered at certain angles, so I'm testing a slightly wider center distance to fix it.
+Next: confirm the wider center distance works, finalize the gripper design, keep reviewing older parts.
 
 
 <img width="502" height="675" alt="image" src="https://github.com/user-attachments/assets/e0e0fb94-e6ad-4744-bd72-f3fe403ef239" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**Day 10**: July 20, 2026
-
-
-Time spent: **2 hours 25 minutes**
-
-
-**What I worked on**
-
-Focused entirely on designing the gripper for the robotic arm. After comparing several end-effector designs in previous sessions, I decided to use a parallel-jaw gripper for the final design.
-
-Most of today's work involved determining the best location for the servo inside the gripper housing and designing the gear mechanism that will transfer the servo's rotation into the opening and closing motion of the jaws. I also continued developing the gripper CAD model while ensuring the components fit together correctly.
-
-
-**What I learned**
-
-I decided that a parallel jaw gripper is the most suitable design for my project because it provides a simple and reliable way to grip small, lightweight objects.
-
-While designing the gripper, I found that servo placement plays an important role in the overall mechanism. Positioning the servo correctly is necessary to provide enough space for the gears and allow the jaws to move through their full range of motion without interference.
-
-I also designed the gear system that will drive the gripper. This required determining how the servo's rotational motion would be transferred to the jaws while keeping the mechanism compact enough to fit within the gripper housing.
-
-Throughout the design process, I continued verifying dimensions using the servo specifications to accurately position the output shaft and ensure the remaining components aligned correctly.
-
-
-**Decisions made**
-
-Selected the parallel jaw gripper as the final end-effector design.
-
-Decided to use a gear-driven mechanism to operate the gripper instead of a direct linkage.
-
-Continued refining the servo placement and gear layout within the gripper assembly.
-
-
-**Next steps**
-
-Finish the remaining CAD work for the gripper.
-
-Verify that the drive gears mesh correctly and make any necessary adjustments.
-
-Test the servo placement within the completed gripper assembly.
-
-Continue finalizing the complete robotic arm assembly.
-
+Day 10: July 20, 2026
+Time spent: 2 hours 25 minutes
+Locked in the parallel jaw gripper design and spent most of the day figuring out where to put the servo inside the housing and designing the gear mechanism that turns the servo rotation into the jaw movement. Servo placement mattered a lot more than I expected, get it wrong and there's no room for the gears or the jaws can't move properly.
+Next: finish the gripper CAD, check that the drive gears mesh correctly, test the servo placement. 
 
 <img width="777" height="403" alt="image" src="https://github.com/user-attachments/assets/9c631fda-9832-400d-a7ec-c23c53df265e" />
 <img width="392" height="431" alt="image" src="https://github.com/user-attachments/assets/03b5c887-9fb7-4648-92c2-211ba3b7dfc2" />
@@ -483,39 +105,10 @@ Continue finalizing the complete robotic arm assembly.
 
 **Day 11**: July 21, 2026
 
-
 Time spent: **4 hours**
 
-
-**What I worked on**
-
-Finished designing the gripper mechanism for the robotic arm. The final design uses a gear-driven parallelogram linkage that allows the jaws to remain parallel as they open and close. A large portion of today's work was spent troubleshooting issues within the assembly, but by the end of the session I had a fully functioning gripper mechanism.
-
-
-**What I learned**
-
-While testing the gear system, I learned that correct gear meshing depends not only on the gear dimensions but also on the rotational alignment of the teeth. I found that offsetting the gears by half of a tooth pitch allowed the teeth to mesh correctly instead of overlapping.
-
-I also discovered that an incorrect center distance can appear to be a gear alignment problem. After checking the gear dimensions, I found that my center distance was slightly smaller than the calculated value. Correcting it to 31.5 mm resolved the remaining interference between the gears.
-
-While assembling the four-bar linkage, I learned that adding unnecessary constraints can cause the assembly to become over-constrained. Once the linkage was built using the correct pivot locations and dimensions, the mechanism maintained its motion without requiring an additional parallel constraint.
-
-
-**Decisions made**
-
-Completed the final gripper mechanism using a gear-driven parallelogram linkage.
-
-Removed the unnecessary parallel constraint from the assembly.
-
-
-**Next steps**
-
-Address the remaining issues.
-
-Finish the complete robotic arm assembly.
-
-Continue testing the gripper to verify its full range of motion.
-
+Finished the gripper mechanism today using a gear-driven parallelogram linkage so the jaws stay parallel while opening and closing. Spent most of the time fighting the gear problems from earlier and learned that correct meshing depends on rotational alignment too, not just size. Fixed it by offsetting the gears by half a tooth pitch. Also found what looked like an alignment problem was actually just a center distance that was slightly too small. One more issue came from over-constraining the linkage, removing an extra constraint let it move freely on its own.
+Next: fix remaining issues, finish the full arm assembly, keep testing the gripper's range of motion.
 
 https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
 
@@ -523,39 +116,10 @@ https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
 
 **Day 12**: July 22, 2026
 
-
 Time spent: **2 hours**
 
-
-**What I worked on**
-
-Finished troubleshooting the remaining issues in the robotic arm and completed the full CAD assembly. After making the final adjustments, I verified that the entire assembly functions correctly and that all of the major components fit together as intended.
-
-
-**What I learned**
-
-Completing the full assembly allowed me to evaluate the robotic arm as a system rather than testing each section individually. This made it easier to identify how changes in one component affected the rest of the design and confirmed that the base, shoulder, elbow, wrist, and gripper all operate together as expected.
-
-I also learned that completing the full assembly is an important step before manufacturing because it helps reveal any remaining alignment or interference issues that may not be obvious when parts are designed separately.
-
-
-**Decisions made**
-
-Completed and verified the full robotic arm assembly.
-
-Confirmed that the core mechanical design no longer requires any major redesigns.
-
-Shifted the project's focus from design work to final verification and refinement.
-
-
-**Next steps**
-
-Perform a final review of every part by comparing dimensions with the actual hardware specifications.
-
-Make any final adjustments that are identified during the review.
-
-Complete the bill of materials and calculate the final estimated project cost.
-
+Finished troubleshooting and completed the full CAD assembly today, base, shoulder, elbow, wrist, and gripper all working together. Testing everything as one system made it much easier to see how changes in one part affected the rest. No major redesigns needed at this point, so I'm shifting into verification mode.
+Next: do a final review of every part against real hardware specs and finish the BOM.
 
 <img width="1252" height="745" alt="image" src="https://github.com/user-attachments/assets/f61de71a-2e87-4aa4-85aa-c128c3cc569e" />
 
@@ -563,50 +127,10 @@ Complete the bill of materials and calculate the final estimated project cost.
 
 **Day 13**: July 23, 2026
 
-
 Time spent: **3 hours**
 
-
-**What I worked on**
-
-Today I focused on reviewing and improving my robotic arm design before continuing with assembly and simulation.
-
-I carefully inspected each CAD part to identify design mistakes, fitment issues, and potential weak points. After finding several areas that could be improved, I updated the affected parts to improve their fit, strength, and overall manufacturability.
-
-I also researched different methods for routing wires throughout the robotic arm. I planned to leave extra wire at each joint to provide enough slack for the servos to move through their full range of motion while reducing the risk of wires being pinched or snagged during operation.
-
-Finally, I began preparing the robotic arm for simulation by exporting the CAD assembly from Onshape using the **onshape-to-robot** exporter. During the export, I discovered that the assembly was detected with **0 degrees of freedom**, indicating that the assembly mates were not recognized as movable joints. I also found that some parts did not have material properties assigned, resulting in missing mass values. These issues will need to be corrected before the robotic arm can be successfully simulated in PyBullet.
-
-**What I learned**
-
-
-Today I learned that proper wire management is an important part of robotic arm design. Leaving enough slack at each joint allows the arm to move freely, while careful routing helps prevent wires from being stretched, pinched, or damaged during operation.
-
-I also learned that simulation software relies on a correctly constrained CAD assembly. If revolute joints are not properly defined, the exporter cannot generate a movable robot model. In addition, assigning material properties is necessary because the simulator uses them to calculate realistic mass and physical behavior.
-
-
-**Decisions made**
-
-Reviewed every CAD part and corrected several design issues.
-
-Improved the design by refining part geometry and fitment.
-
-Decided to leave extra wire at each joint to allow for the arm's full range of motion.
-
-Began preparing the robotic arm for simulation using the **onshape-to-robot** exporter.
-
-Decided to correct the assembly mates and assign material properties before continuing with simulation.
-
-
-**Next steps**
-
-Correct the assembly mates so all movable joints are recognized correctly.
-
-Assign material properties to every CAD part.
-
-Export the updated robotic arm again and test it in PyBullet.
-
-Continue refining the CAD model based on the simulation results.
+Reviewed every CAD part looking for mistakes and fixed what I found. Worked out wire routing, leaving extra slack at each joint so the servos can move freely without pinching anything. Tried exporting the assembly to PyBullet and ran into a wall, it detected zero degrees of freedom, meaning none of my mates were recognized as actual joints. Also found some parts were missing material properties.
+Next: fix the assembly mates, assign material properties, and try exporting again.
 
 <img width="370" height="750" alt="image" src="https://github.com/user-attachments/assets/df353599-1760-4c87-a56d-3c538e7c4aa8" />
 
@@ -614,43 +138,10 @@ Continue refining the CAD model based on the simulation results.
 
 **Day 14**: July 24, 2026
 
-
 Time spent: **2.5 hours**
 
-
-**What I worked on**
-
-Today I focused on creating an animation demo of my robotic arm so I could better understand how the different joints move together and how the mechanism behaves before building the final version.
-
-At first, I thought creating the animation would be straightforward, but I quickly realized it was much more complicated than expected. I explored several different methods, including exporting my CAD model to a URDF file for simulation in PyBullet. I researched the complete workflow, including installing the required Python packages, generating the URDF from Onshape, and controlling the robot joints through Python scripts.
-
-While testing this approach, I discovered that my assembly was not exporting correctly because the software detected **0 degrees of freedom**, meaning the joints were not being recognized properly. I also found that some parts were missing material properties, which would prevent accurate physics simulation.
-
-After experimenting with different options, I decided to use **Gear Relations** in Onshape instead. By linking the joints together with a gear relation, I was able to animate multiple parts of the robotic arm using a single animation. This gave me a simple way to demonstrate the movement of the arm without having to build a full physics simulation.
-
-
-**What I learned**
-
-Today I learned that creating robotic animations is much more involved than simply exporting a CAD model. Simulation software such as PyBullet requires a properly constrained assembly with correctly defined joints and mass properties before realistic movement can be generated.
-
-I also learned how Onshape's **Gear Relation** feature can synchronize the motion of multiple gears, allowing several components to move together from a single driving joint. This provides a quick and effective way to demonstrate the robot's motion while the full simulation is still being developed.
-
-
-**Decisions made**
-
-Decided to use Onshape's Gear Relation feature to create the animation instead.
-
-Successfully created a multi-part animation driven by a single animated joint.
-
-
-**Next steps**
-
-Continue improving the CAD assembly and joint definitions.
-
-Finish the remaining CAD work and prepare the robotic arm for 3D printing.
-
-Create a checklist for all the parts and an estimated cost.
-
+Wanted to make an animation of the arm moving so I could see how the joints work together before building the real thing, thought it would be quick but it wasn't. Tried the PyBullet route again and hit the same issues as before. Ended up using Onshape's Gear Relation feature instead to link the joints together so one driving joint animates the whole arm at once. Good enough to demo the motion for now.
+Next: keep improving the joint definitions, finish the remaining CAD, start pricing out the parts list.
 
 <img width="1096" height="718" alt="Main Arm" src="https://github.com/user-attachments/assets/517648e7-f72f-484d-bfb2-2633fb299878" />
 
@@ -658,85 +149,21 @@ Create a checklist for all the parts and an estimated cost.
 
 **Day 15**: July 26, 2026
 
-
 Time spent: **2 hours 30 minutes**
 
+Finalized the BOM today and went through every component to make sure nothing was missing. Swapped some Amazon.com parts for Amazon.ca ones to save on shipping and import costs. Added a fuse holder to protect the ESP32 that I'd missed before. Learned some cheap MG servos only have metal gears on part of the gearbox, the rest is plastic, which is fine for this build but good to know for later. Total estimated cost came out to around $257.10 CAD.
+Next: make final CAD tweaks, apply for the grant, start the physical build once parts arrive.
 
-**What I worked on**
-
-Today I finalized my bill of materials  and parts checklist for the robotic arm project. I reviewed every component to make sure nothing was missing. I also replaced several of my original Amazon.com items with Amazon.ca equivalents to reduce shipping costs and avoid unnecessary import fees where possible.
-
-As part of my review, I added a missing safety component to my electrical system: a 5x20mm inline fuse holder and glass fuse kit to protect the ESP32. I also verified that all of my major components were included in the BOM, including the DS3225MG servos, MG90S servos, ESP32, power supply, wiring, breadboard, heat-set inserts, PLA+ filament, and other required hardware.
-
-
-**What I learned**
-
-Today I confirmed that 22 AWG solid-core wire is compatible with standard breadboards and can be inserted directly without additional connectors. I also confirmed that the Canadian MG90S servo options have the same dimensions as the original servos I planned to use, meaning my CAD design will not need any changes.
-
-I learned that some inexpensive "MG" servos only have metal gears for part of the gearbox, while the remaining gears may still be plastic. Although this is acceptable for my lightweight robotic arm, it is worth considering for future projects requiring greater durability.
-
-I also confirmed the servo shaft dimensions and reviewed my electrical system, learning that the inline fuse should be connected to the ESP32's VIN line rather than the shared servo power rail to avoid nuisance fuse failures caused by normal servo current draw.
-
-
-**Decisions made**
-
-Finalized the complete bill of materials for the robotic arm.
-
-Replaced several Amazon.com parts with Amazon.ca equivalents.
-
-Added a 5x20mm inline fuse holder and glass fuse kit to protect the ESP32.
-
-Confirmed all major components have been sourced and accounted for.
-
-Estimated the total project cost to be approximately **$257.10 CAD**, including estimated import charges.
-
-
-**Next steps**
-
-Make the final improvements to the CAD assembly.
-
-Apply for the grant needed to fund the project.
-
-Begin the physical build once the grant gets approved and the parts arrive, starting with mechanical assembly, followed by wiring, calibration, and programming.
+<img width="963" height="565" alt="image" src="https://github.com/user-attachments/assets/1f65228f-46b7-4440-ae68-95d81e294ded" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Day 16**: July 27, 2026
 
-
 Time spent: **1 hour 47 min**
 
-
-**What I worked on**
-
-Today I continued improving my robotic arm CAD assembly by adding more realistic mechanical details. The M3 screw holes and brass heat-set insert mounting points were already designed, but I created CAD models of the M3 screws and brass heat-set inserts and added them into the assembly.
-
-Adding these hardware components helped make the assembly more realistic and allowed me to better visualize how the parts will be connected during the final build.
-
-
-**What I learned**
-
-While adding the screws and inserts into the assembly, I found a few small design issues that were not obvious before. Including the hardware models helped me double-check clearances, mounting locations, and part fits.
-
-I fixed these issues before printing, preventing possible assembly problems later. I also confirmed that the current design improvements were enough without needing a major redesign.
-
-
-**Decisions made**
-
-Finalized the M3 screw and brass insert hardware details in the CAD assembly.
-
-Added realistic hardware models to better visualize the final robotic arm build.
-
-
-**Next steps**
-
-Apply for the Stardance grant once the application system is available again.
-
-Submit the design application when the form is working.
-
-Order the parts after confirming the budget.
-
-Begin the physical build once the parts arrive.
+Added real M3 screw and heat set insert models into the assembly instead of just leaving the mounting holes empty. Makes the whole thing look and feel more real, and it's genuinely useful, putting the hardware models in exposed a few clearance and fit issues I hadn't noticed before. Fixed those before printing.
+Next: apply for the Stardance grant once the form's back up, order parts once budget's confirmed, start the physical build.
 
 
 <img width="553" height="266" alt="image" src="https://github.com/user-attachments/assets/9301283e-7855-48a1-abfd-7b75c069d0c7" />
