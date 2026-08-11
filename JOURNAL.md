@@ -171,3 +171,25 @@ Next: apply for the Stardance grant once the form's back up, order parts once bu
 <img width="553" height="266" alt="image" src="https://github.com/user-attachments/assets/9301283e-7855-48a1-abfd-7b75c069d0c7" />
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 17**: August 8, 2026
+
+Time spent: **2 hours**
+
+Started learning how to wire and code servos using an ESP32 on Cirkit today. The end goal is using the Bluepad32 library to connect a gaming controller and control the arm with it, but decided to start simple first with push buttons controlling the servos instead of jumping straight into wireless input. Got one servo moving properly which confirmed the basic wiring and code logic works. Ran into a wiring issue with the other servos that I couldn't figure out today, so that's the first thing to fix next session. Also landed on which specific library I'll be using going forward. Learned a good amount about the different ESP32 pin types and what they're for, along with the coding structure needed to control servos properly.
+Next: fix the wiring issue on the circuit, then start learning how to control the servos with Bluepad32 and a gaming controller.
+
+<img width="780" height="455" alt="image" src="https://github.com/user-attachments/assets/a550236a-79ba-41a5-b30c-7d9b8166f73e" />
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Day 18**: August 9, 2026
+
+Time spent: **3 hours**
+
+Fixed the button issue from last session today. Turned out it was just a wiring mix up where the connections weren't matched up correctly. Traced through the circuit, fixed the wiring, and the servos started responding properly. Also spent time learning the Bluepad32 library and wrote code to let an Xbox controller's joysticks and buttons control the servos directly. Expected it to be pretty complicated going in, but once I actually got into it, it was a lot more straightforward than it looked. Ran into a handful of setup and communication issues early on but worked through them one by one. By the end of the session I had the full code done for controlling the servos with the Xbox controller.
+Next: order the parts and start 3D printing once funding is approved.
+
+https://github.com/user-attachments/assets/10d47a55-776d-477c-bda6-7a32d190e0bc
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
