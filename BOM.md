@@ -1,6 +1,6 @@
 # Robot Arm Parts Checklist
 
-- [x] [[4-Pack 25KG Digital RC Servo Waterproof DS3225]([https://shorturl.at/o4VK4] — $71.5 (with tax)
+- [x] [[4-Pack 25KG Digital RC Servo Waterproof DS3225].(https://shorturl.at/o4VK4). — $71.5 (with tax)
 - [x] [2PCS MG90S 9g Micro Servo Motor](https://www.amazon.com/MG90S-Helicopter-Servos-Arduino-Project/dp/B0CNL755KP) — $14.16 (with tax)
 - [x] [BTF-LIGHTING 5V 10A 30W Power Supply Adapter](https://www.amazon.ca/BTF-LIGHTING-Certified-Transformer-Converter-SK6812RGBW/dp/B0FNWC87NN) — $46.32 (with tax)
 - [x] [ESP32 Development Board (Wishiot NodeMCU-32S)](https://www.amazon.ca/Wishiot-NodeMCU-32S-ESP-WROOM-32-Microcontroller-Bluetooth-Compatible/dp/B09MZ1644M) — $16.94 (with tax)
