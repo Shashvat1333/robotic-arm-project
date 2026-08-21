@@ -10,7 +10,7 @@
 | 6 | 26 Gauge Solid Wire | 1 | Wiring for connections and prototyping | $11.74 | [Amazon](https://www.amazon.ca/MKBKLLJY-Insulation-Flexible-Silicone-Assortment/dp/B0D97ZJ7W1/) |
 | 7 | KADRICK 420PCS M3 Heat Set Inserts Kit | 1 | Threaded inserts for 3D-printed parts | $25.48 | [Amazon](https://www.amazon.com/Threaded-Assortment-M3x6-30mm-Installation-Printing/dp/B0GYRQG7F2/) |
 | 8 | Mini Breadboard | 1 | Prototyping circuit connections | $3.30 | [AliExpress](https://www.aliexpress.com/item/1005010435623453.html) |
-| 9 | ELEGOO PLA+ Filament 1.75mm Black 1KG | 1 | 3D printing material for arm structural parts | $48.50 | [Amazon](https://www.amazon.ca/ELEGOO-Filament-Toughness-Dimensional-Cardboard/dp/B0CLLY9CBN/) |
+| 9 | ELEGOO PLA+ Filament 1.75mm Black 1KG | 2 | 3D printing material for arm structural parts | $48.50 | [Amazon](https://www.amazon.ca/ELEGOO-Filament-Toughness-Dimensional-Cardboard/dp/B0CLLY9CBN/) |
 | 10 | Import Charges | — | Customs/import fees on international orders | $12.00 | — |
 
 **Total: $225.12 CAD**
