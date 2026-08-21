@@ -1,6 +1,6 @@
 # Bill of Materials — Robotics Arm
 
-| # | Item | Qty | Description | Price (CAD, tax incl.) | Link |
+| # | Item | Qty | Description | Price (tax incl.) | Link |
 |---|------|-----|-------------|-------------------------|------|
 | 1 | 25KG Digital RC Servo (DS3225) | 4 Pack | Waterproof, high-torque servo for main arm joints | $71.50 | [Amazon](https://www.amazon.ca/HOOYIJ-Digital-Waterproof-DS3225-Steering/dp/B0D6RRGDLP/) |
 | 2 | MG90S 9g Micro Servo Motor | 2 Pack | Small servo for gripper / wrist actuation | $7.40 | [AliExpress](https://www.aliexpress.com/item/4000903254039.html) |
