@@ -1,15 +1,17 @@
-# Robot Arm Parts Checklist
+# Bill of Materials — Robotics Arm
 
-- [x] [[4-Pack 25KG Digital RC Servo Waterproof DS3225].(https://shorturl.at/o4VK4). — $71.5 (with tax)
-- [x] [2PCS MG90S 9g Micro Servo Motor](https://www.amazon.com/MG90S-Helicopter-Servos-Arduino-Project/dp/B0CNL755KP) — $14.16 (with tax)
-- [x] [BTF-LIGHTING 5V 10A 30W Power Supply Adapter](https://www.amazon.ca/BTF-LIGHTING-Certified-Transformer-Converter-SK6812RGBW/dp/B0FNWC87NN) — $46.32 (with tax)
-- [x] [ESP32 Development Board (Wishiot NodeMCU-32S)](https://www.amazon.ca/Wishiot-NodeMCU-32S-ESP-WROOM-32-Microcontroller-Bluetooth-Compatible/dp/B09MZ1644M) — $16.94 (with tax)
-- [x] [26 Gauge Solid Wire (4-color kit)](https://www.amazon.ca/MKBKLLJY-Insulation-Flexible-Silicone-Assortment/dp/B0D97ZJ7W1) — $11.74 (with tax)
-- [x] [KADRICK 420PCS M3 Heat Set Inserts Kit](https://www.amazon.com/Threaded-Assortment-M3x6-30mm-Installation-Printing/dp/B0GYRQG7F2) — $25.48 (with tax)
-- [x] [Mini Breadboard](https://www.amazon.ca/MMOBIEL-Solderless-Breadboard-Prototype-Circuit/dp/B0CPJRSLDX) — $7.90 (with tax)
-- [x] [ELEGOO PLA+ Filament 1.75mm Black 2KG](https://www.amazon.ca/ELEGOO-Filament-Dimensional-Accuracy-Compatible/dp/B0BM9CVGQ4/) — $39.65 (with tax)
-- [x] [Fuse Kit (5x20mm Inline Holders + Assorted Glass Fuses)](https://www.amazon.ca/BeiLan-5x20mm-Inline-Fast-Blow-Assorted/dp/B07X8WL5TC) — $16.94 (with tax)
+| # | Item | Qty | Description | Price (CAD, tax incl.) | Link |
+|---|------|-----|-------------|-------------------------|------|
+| 1 | 25KG Digital RC Servo (DS3225) | 4 Pack | Waterproof, high-torque servo for main arm joints | $71.50 | [Amazon](https://www.amazon.ca/HOOYIJ-Digital-Waterproof-DS3225-Steering/dp/B0D6RRGDLP/) |
+| 2 | MG90S 9g Micro Servo Motor | 2 Pack | Small servo for gripper / wrist actuation | $7.40 | [AliExpress](https://www.aliexpress.com/item/4000903254039.html) |
+| 3 | 5V 10A Power Supply Adapter | 1 | Main power supply for servos | $23.40 | [AliExpress](https://www.aliexpress.com/item/1005004121728138.html) |
+| 4 | 5.5x2.1mm DC Power Female Jack Pigtail | 1 | Connects power adapter to circuit | $6.00 | [AliExpress](https://www.aliexpress.com/item/1005008401380227.html) |
+| 5 | ESP32-WROOM-32 Dev Board | 1 | Dual-core WiFi + Bluetooth MCU for arm control (Bluepad32) | $15.80 | [Amazon](https://www.amazon.ca/ESP-WROOM-32-NodeMCU-Bluetooth-Development-Microcontroller/dp/B0CHBMFJBQ/) |
+| 6 | 26 Gauge Solid Wire | 1 | Wiring for connections and prototyping | $11.74 | [Amazon](https://www.amazon.ca/MKBKLLJY-Insulation-Flexible-Silicone-Assortment/dp/B0D97ZJ7W1/) |
+| 7 | KADRICK 420PCS M3 Heat Set Inserts Kit | 1 | Threaded inserts for 3D-printed parts | $25.48 | [Amazon](https://www.amazon.com/Threaded-Assortment-M3x6-30mm-Installation-Printing/dp/B0GYRQG7F2/) |
+| 8 | Mini Breadboard | 1 | Prototyping circuit connections | $3.30 | [AliExpress](https://www.aliexpress.com/item/1005010435623453.html) |
+| 9 | ELEGOO PLA+ Filament 1.75mm Black 1KG | 1 | 3D printing material for arm structural parts | $48.50 | [Amazon](https://www.amazon.ca/ELEGOO-Filament-Toughness-Dimensional-Cardboard/dp/B0CLLY9CBN/) |
+| 10 | Import Charges | — | Customs/import fees on international orders | $12.00 | — |
 
-**Import charge:** ~$21 
+**Total: $225.12 CAD**
 
-**Total: ~$273.37**
