@@ -13,5 +13,5 @@
 | 9 | ELEGOO PLA+ Filament 1.75mm Black 1KG | 2 | 3D printing material for arm structural parts | $48.50 | [Amazon](https://www.amazon.ca/ELEGOO-Filament-Toughness-Dimensional-Cardboard/dp/B0CLLY9CBN/) |
 | 10 | Import Charges | — | Customs/import fees on international orders | $12.00 | — |
 
-**Total: $225.12 CAD**
+**Total: $225.12**
 
