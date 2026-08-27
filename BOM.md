@@ -2,7 +2,7 @@
 
 | # | Item | Qty | Description | Price (tax incl.) | Link |
 |---|------|-----|-------------|-------------------|------|
-| 1 | 25KG Digital RC Servo (DS3225) | 4 Pack | Waterproof, high-torque servo for main arm joints | $70.50 | [AliExpress](https://www.aliexpress.com/item/1005005692812885.html) |
+| 1 | 25KG Digital RC Servo (DS3225) | 4 Pack | Waterproof, high-torque servo for main arm joints | $70.50 | [AliExpress](https://www.aliexpress.com/item/1005007822346908.html) |
 | 2 | MG90S 9g Micro Servo Motor | 2 Pack | Small servo for gripper / wrist actuation | $7.40 | [AliExpress](https://www.aliexpress.com/item/4000903254039.html) |
 | 3 | 5V 10A Power Supply Adapter | 1 | Main power supply for servos | $23.40 | [AliExpress](https://www.aliexpress.com/item/1005004121728138.html) |
 | 4 | 5.5x2.1mm DC Power Female Jack Pigtail | 1 | Connects power adapter to circuit | $6.00 | [AliExpress](https://www.aliexpress.com/item/1005008401380227.html) |
