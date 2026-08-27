@@ -36,3 +36,5 @@ The main goals of this project are:
 - GitHub
 - JOURNAL.md
 
+<img width="370" height="750" alt="image" src="https://github.com/user-attachments/assets/e9d09f8e-5ce9-402f-af84-5a91fc626033" />
+
