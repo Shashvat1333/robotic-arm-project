@@ -11,6 +11,6 @@
 | 7 | KADRICK 420PCS M3 Heat Set Inserts Kit | 1 | Threaded inserts for 3D-printed parts | $25.48 | [Amazon](https://www.amazon.com/Threaded-Assortment-M3x6-30mm-Installation-Printing/dp/B0GYRQG7F2/) |
 | 8 | Perfboard (6cm × 8cm) | 1 | Solder-based board — replaces breadboard for safe high-current servo wiring | $2.80 | [AliExpress](https://www.aliexpress.com/item/1005006829112244.html) |
 | 9 | PLA+ Filament 1.75mm 1KG | 673g used | 3D printing material for arm structural parts — cost reflects grams actually used (sliced in PrusaSlicer), not full spool purchased | $15.07 | [AliExpress](https://www.aliexpress.com/item/1005011683191901.html) |
-| 10 | Import Charges | — | Customs/import fees on international orders | $22.00 | — |
+| 10 | Import Charges | — | Customs/import fees on international orders | $12.00 | — |
 
-**Total: $180.82**
+**Total: $175.92**
