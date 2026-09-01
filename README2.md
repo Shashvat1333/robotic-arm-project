@@ -1,6 +1,5 @@
 # Robotic Arm Project
 
-[![View Wiring Documentation](https://img.shields.io/badge/Wiring-Documentation-blue)](Wiring%20Diagrams.md)
 
 A custom-designed, multi-axis robotic arm controlled wirelessly via Bluetooth using an ESP32 and Bluepad32.
 
