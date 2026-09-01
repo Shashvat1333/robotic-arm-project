@@ -17,7 +17,7 @@ This project combines mechanical engineering, 3D printing, electronics design, a
 ---
 
 ## CAD Model & Assembly
-The structural framework and mechanical joints of the robotic arm were modeled with close attention to mechanical clearances and structural integrity. To support open-source collaboration and manufacturing, all production-ready parts and full assemblies are stored directly in the `cad/` folder as `.step` files. 
+The structural framework and mechanical joints of the robotic arm were modeled with close attention to mechanical clearances and structural integrity. To support open-source collaboration and manufacturing, all production-ready parts and full assemblies are stored directly in the [CAD](https://github.com/Shashvat1333/robotic-arm-project/tree/main/CAD) folder as `.step` files. 
 
 https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
 
