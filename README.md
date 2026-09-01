@@ -1,4 +1,3 @@
-```markdown
 # Robotic Arm Project
 
 A custom-designed, multi-axis robotic arm controlled wirelessly via Bluetooth using an ESP32 and Bluepad32.
@@ -38,8 +37,6 @@ robotic-arm-project/
 ├── JOURNAL.md              # Build log / engineering journal
 ├── LICENSE.md
 └── README.md
-
-```
 
 ---
 
