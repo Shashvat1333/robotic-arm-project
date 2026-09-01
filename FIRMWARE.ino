@@ -69,6 +69,6 @@ void loop() {
     ClawAngle = constrain(ClawAngle, 0, 180);
     Servo6.write(ClawAngle);
     
-    delay(15); // Added the missing semicolon here!
+    delay(15); 
   }
 }
