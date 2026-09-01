@@ -4,6 +4,16 @@ A custom-designed, multi-axis robotic arm controlled wirelessly via Bluetooth us
 
 ![Robotic Arm Render](https://github.com/user-attachments/assets/e9d09f8e-5ce9-402f-af84-5a91fc626033)
 
+## Table of Contents
+- [Overview](#overview)
+- [Repository Structure](#repository-structure)
+- [CAD Model & Assembly](#cad-model--assembly)
+- [Schematic & Wiring](#schematic--wiring)
+- [Firmware](#firmware)
+- [Getting Started](#getting-started)
+- [Bill of Materials (BOM)](#bill-of-materials-bom)
+- [License](#license)
+
 ## Overview
 This project combines mechanical engineering, 3D printing, electronics design, and embedded firmware development into a cohesive hardware system. The primary goal is to build a fully articulated, functional robotic arm with multiple degrees of freedom that responds seamlessly to a wireless game controller. By integrating custom gear assemblies, iterative 3D-printed brackets, and robust power management, this project bridges the gap between digital design and physical prototyping.
 
@@ -13,6 +23,20 @@ Building a robotic arm from scratch meant handling every stage of development pe
 - **Custom Mechanical Design:** Engineered with precise tolerance margins for 3D printing, featuring custom gear trains and linkage assemblies designed in Onshape.
 - **Wireless Control Integration:** Utilizes an ESP32 microcontroller paired with the Bluepad32 framework to read live joystick and button inputs from a standard Bluetooth controller.
 - **Safe Power Distribution:** Employs a dedicated 5V 10A DC power supply routed through custom soldered bus lines on a perfboard, replacing high-resistance plastic breadboards to handle heavy servo current draws safely.
+
+---
+
+## Repository Structure
+```text
+robotic-arm-project/
+├── CAD/                   # .step files for all printed/machined parts
+├── Firmware/               # ESP32 firmware (FIRMWARE.ino)
+├── Wiring Diagrams.md      # Full wiring/schematic reference
+├── Images & Demo/          # Renders, build photos, demo video
+├── BOM.md                  # Full bill of materials
+├── JOURNAL.md              # Build log / engineering journal
+├── LICENSE.md
+└── README.md
 
 ---
 
