@@ -1,34 +1,39 @@
 # Robotic Arm Project
 
-
 A custom-designed, multi-axis robotic arm controlled wirelessly via Bluetooth using an ESP32 and Bluepad32.
 
-![Robotic Arm Render](https://github.com/user-attachments/assets/e9d09f8e-5ce9-402f-af84-5a91fc626033)
-
 ## Overview
+
 This project combines mechanical engineering, 3D printing, electronics design, and embedded firmware development into a cohesive hardware system. The primary goal is to build a fully articulated, functional robotic arm with multiple degrees of freedom that responds seamlessly to a wireless game controller. By integrating custom gear assemblies, iterative 3D-printed brackets, and robust power management, this project bridges the gap between digital design and physical prototyping.
 
+Building a robotic arm from scratch meant handling every stage of development personally. From sketching the initial motion paths to balancing structural weight limits against servo torque ratings, every choice was made to keep the system sturdy yet responsive. Instead of relying on pre-made kits, the entire assembly was built up component by component to ensure it could handle real physical loads without flexing or slipping at the joints.
+
 ### Key Features:
-- **Custom Mechanical Design:** Engineered with precise tolerance margins for 3D printing, featuring custom gear trains and linkage assemblies designed in Onshape.
-- **Wireless Control Integration:** Utilizes an ESP32 microcontroller paired with the Bluepad32 framework to read live joystick and button inputs from a standard Bluetooth controller.
-- **Safe Power Distribution:** Employs a dedicated 5V 10A DC power supply routed through custom soldered bus lines on a perfboard, replacing high-resistance plastic breadboards to handle heavy servo current draws safely.
+
+* **Custom Mechanical Design:** Engineered with precise tolerance margins for 3D printing, featuring custom gear trains and linkage assemblies designed in Onshape.
+* **Wireless Control Integration:** Utilizes an ESP32 microcontroller paired with the Bluepad32 framework to read live joystick and button inputs from a standard Bluetooth controller.
+* **Safe Power Distribution:** Employs a dedicated 5V 10A DC power supply routed through custom soldered bus lines on a perfboard, replacing high-resistance plastic breadboards to handle heavy servo current draws safely.
 
 ---
 
 ## CAD Model & Assembly
-The structural framework and mechanical joints of the robotic arm were modeled with close attention to mechanical clearances and structural integrity. To support open-source collaboration and manufacturing, all production-ready parts and full assemblies are stored directly in the [CAD](https://github.com/Shashvat1333/robotic-arm-project/tree/main/CAD) folder as `.step` files. 
+
+The structural framework and mechanical joints of the robotic arm were modeled with close attention to mechanical clearances and structural integrity. Designing the parts in Onshape allowed for careful testing of gear ratios, pivot points, and clearance gaps so the 3D-printed pieces fit together smoothly with minimal post-processing. To support open-source collaboration and manufacturing, all production-ready parts and full assemblies are stored directly in the [CAD](https://github.com/Shashvat1333/robotic-arm-project/tree/main/CAD) folder as `.step` files.
+
+When putting the physical frame together, thermal-set inserts were melted directly into the plastic structures using a soldering iron, giving the M3 bolts a solid metal thread to bite into. This prevents the plastic from stripping out under regular movement and makes it easy to take joints apart for maintenance or upgrades.
 
 https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
 
 ---
 
 ## Schematic & Wiring
-Because this project utilizes modular components wired together on a custom soldered perfboard rather than a manufactured printed circuit board, the system relies on a detailed wiring layout. 
 
-You can view the complete connection specifications and documentation in [Wiring Diagrams.md](Wiring%20Diagrams.md).
+Because this project utilizes modular components wired together on a custom soldered perfboard rather than a manufactured printed circuit board, the system relies on a detailed wiring layout. High-torque servos pull significant current under load, which is why standard breadboards were abandoned early on to prevent melting rails or voltage drops.
+
+Instead, a custom perfboard layout uses heavy solder traces to act as main power and ground distribution rails, ensuring every servo gets clean, steady voltage directly from the 10-amp adapter. You can view the complete connection specifications and documentation in [Wiring Diagrams.md](https://www.google.com/search?q=Wiring%2520Diagrams.md).
 
 | Component | ESP32 GPIO (Signal) | Power (+) | Ground (–) |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Servo 1 – Base (DS3225MG) | GPIO 21 | Perfboard + bus line | Perfboard – bus line |
 | Servo 2 – Shoulder (DS3225MG) | GPIO 5 | Perfboard + bus line | Perfboard – bus line |
 | Servo 3 – Elbow (DS3225MG) | GPIO 18 | Perfboard + bus line | Perfboard – bus line |
@@ -41,15 +46,17 @@ You can view the complete connection specifications and documentation in [Wiring
 ---
 
 ## Firmware
-The control firmware is written in C++ using the Arduino framework, integrating the `ESP32Servo` and `Bluepad32` libraries to map controller joysticks and triggers directly to servo positions. 
-- The complete source code is located [here](https://github.com/Shashvat1333/robotic-arm-project/blob/main/FIRMWARE.ino).
+
+The control firmware is written in C++ using the Arduino framework, integrating the `ESP32Servo` and `Bluepad32` libraries to map controller joysticks and triggers directly to servo positions. The program continuously listens for a paired Bluetooth gamepad, reads the analog stick coordinates, and translates those inputs into precise PWM signals for each servo motor.
+
+* The complete source code is located [here](https://github.com/Shashvat1333/robotic-arm-project/blob/main/FIRMWARE.ino).
 
 ---
 
 ## Bill of Materials (BOM)
 
 | # | Item | Qty | Description | Price (tax incl.) | Link |
-|---|------|-----|-------------|-------------------|------|
+| --- | --- | --- | --- | --- | --- |
 | 1 | 25KG Digital RC Servo (DS3225) | 4 Pack | Waterproof, high-torque servo for main arm joints | $65.60 | [AliExpress](https://www.aliexpress.com/item/1005009734701047.html) |
 | 2 | MG90S 9g Micro Servo Motor | 2 Pack | Small servo for gripper / wrist actuation | $7.40 | [AliExpress](https://www.aliexpress.com/item/4000903254039.html) |
 | 3 | 5V 10A Power Supply Adapter | 1 | Main power supply for servos | $23.40 | [AliExpress](https://www.aliexpress.com/item/1005004121728138.html) |
