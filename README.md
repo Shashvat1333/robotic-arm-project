@@ -28,16 +28,17 @@ Building a robotic arm from scratch meant handling every stage of development pe
 
 ## Repository Structure
 
+\`\`\`
 robotic-arm-project/
-├── CAD/ # .step files for all printed/machined parts
-├── Firmware/ # ESP32 firmware (FIRMWARE.ino)
-├── Wiring Diagrams.md # Full wiring/schematic reference
-├── Images & Demo/ # Renders, build photos, demo video
-├── BOM.md # Full bill of materials
-├── JOURNAL.md # Build log / engineering journal
+├── CAD/                   # .step files for all printed/machined parts
+├── Firmware/               # ESP32 firmware (FIRMWARE.ino)
+├── Wiring Diagrams.md      # Full wiring/schematic reference
+├── Images & Demo/          # Renders, build photos, demo video
+├── BOM.md                  # Full bill of materials
+├── JOURNAL.md              # Build log / engineering journal
 ├── LICENSE.md
 └── README.md
-
+\`\`\`
 
 ---
 
