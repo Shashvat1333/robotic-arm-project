@@ -29,19 +29,19 @@ Building a robotic arm from scratch meant handling every stage of development pe
 ## Repository Structure
 
 robotic-arm-project/
-├── CAD/                   # .step files for all printed/machined parts
-├── Firmware/               # ESP32 firmware (FIRMWARE.ino)
-├── Wiring Diagrams.md      # Full wiring/schematic reference
-├── Images & Demo/          # Renders, build photos, demo video
-├── BOM.md                  # Full bill of materials
-├── JOURNAL.md              # Build log / engineering journal
+├── CAD/ # .step files for all printed/machined parts
+├── Firmware/ # ESP32 firmware (FIRMWARE.ino)
+├── Wiring Diagrams.md # Full wiring/schematic reference
+├── Images & Demo/ # Renders, build photos, demo video
+├── BOM.md # Full bill of materials
+├── JOURNAL.md # Build log / engineering journal
 ├── LICENSE.md
 └── README.md
+
 
 ---
 
 ## CAD Model & Assembly
-
 The structural framework and mechanical joints of the robotic arm were modeled with close attention to mechanical clearances and structural integrity. Designing the parts in Onshape allowed for careful testing of gear ratios, pivot points, and clearance gaps so the 3D-printed pieces fit together smoothly with minimal post-processing. To support open-source collaboration and manufacturing, all production-ready parts and full assemblies are stored directly in the [CAD](https://github.com/Shashvat1333/robotic-arm-project/tree/main/CAD) folder as `.step` files.
 
 When putting the physical frame together, thermal-set inserts were melted directly into the plastic structures using a soldering iron, giving the M3 bolts a solid metal thread to bite into. This prevents the plastic from stripping out under regular movement and makes it easy to take joints apart for maintenance or upgrades.
@@ -51,15 +51,12 @@ https://github.com/user-attachments/assets/6f530a01-1f68-40d2-a437-52708d4fa79e
 ---
 
 ## Schematic & Wiring
-
 Because this project utilizes modular components wired together on a custom soldered perfboard rather than a manufactured printed circuit board, the system relies on a detailed wiring layout. High-torque servos pull significant current under load, which is why standard breadboards were abandoned early on to prevent melting rails or voltage drops.
 
-Instead, a custom perfboard layout uses heavy solder traces to act as main power and ground distribution rails, ensuring every servo gets clean, steady voltage directly from the 10-amp adapter. You can view the complete connection specifications and documentation in [Wiring Diagrams.md](https://www.google.com/search?q=Wiring%2520Diagrams.md).
-
-> **Note:** Ensure that the GPIO pin numbers defined within the wiring diagram reference file match the firmware implementation and the configuration table below exactly.
+Instead, a custom perfboard layout uses heavy solder traces to act as main power and ground distribution rails, ensuring every servo gets clean, steady voltage directly from the 10-amp adapter. You can view the complete connection specifications and documentation in [Wiring Diagrams.md](Wiring%20Diagrams.md).
 
 | Component | ESP32 GPIO (Signal) | Power (+) | Ground (–) |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | Servo 1 – Base (DS3225MG) | GPIO 21 | Perfboard + bus line | Perfboard – bus line |
 | Servo 2 – Shoulder (DS3225MG) | GPIO 5 | Perfboard + bus line | Perfboard – bus line |
 | Servo 3 – Elbow (DS3225MG) | GPIO 18 | Perfboard + bus line | Perfboard – bus line |
@@ -69,32 +66,35 @@ Instead, a custom perfboard layout uses heavy solder traces to act as main power
 | ESP32 NodeMCU Board | — | VIN pin connected to + bus | GND pin connected to – bus |
 | Power Supply | — | 5V 10A DC Adapter (+) | 5V 10A DC Adapter (–) |
 
+> ⚠️ Make sure `Wiring Diagrams.md` is updated to use these same GPIO numbers.
+
 ---
 
 ## Firmware
-
 The control firmware is written in C++ using the Arduino framework, integrating the `ESP32Servo` and `Bluepad32` libraries to map controller joysticks and triggers directly to servo positions. The program continuously listens for a paired Bluetooth gamepad, reads the analog stick coordinates, and translates those inputs into precise PWM signals for each servo motor.
 
-* The complete source code is located [here](https://github.com/Shashvat1333/robotic-arm-project/blob/main/FIRMWARE.ino).
+- **Source code:** [FIRMWARE.ino](https://github.com/Shashvat1333/robotic-arm-project/blob/main/FIRMWARE.ino)
+- **Required libraries:** `ESP32Servo`, `Bluepad32`
+- **Board:** ESP32 Dev Module
 
 ---
 
 ## Getting Started
 
-Follow these step-by-step instructions to reproduce and build the robotic arm project:
+To build and run this project yourself:
 
-1. **Print the CAD parts:** Access the `.step` files from the `CAD/` folder and slice them for your 3D printer.
-2. **Assemble the frame:** Install the thermal heat-set inserts and secure the structural pieces using bolts following the CAD model layout.
-3. **Wire the electronics:** Build out the perfboard power distribution bus and hook up all components following the reference file in `Wiring Diagrams.md`.
-4. **Flash the firmware:** Open the Arduino IDE, install the required libraries (`ESP32Servo`, `Bluepad32`), select the `ESP32 Dev Module` board target, and flash the code from `Firmware/`.
-5. **Pair a Bluetooth controller:** Power up the system and sync your wireless Bluetooth gamepad to start driving the arm.
+1. **Print the parts** — Slice the `.step` files from the [CAD](https://github.com/Shashvat1333/robotic-arm-project/tree/main/CAD) folder (built and tested using PLA+ filament).
+2. **Assemble the frame** — Install M3 heat-set inserts into the printed parts using a soldering iron, then bolt the assembly together following the CAD model.
+3. **Wire the electronics** — Follow [Wiring Diagrams.md](Wiring%20Diagrams.md) to connect servos, the ESP32, and the power supply through the perfboard bus lines.
+4. **Flash the firmware** — Open [FIRMWARE.ino](https://github.com/Shashvat1333/robotic-arm-project/blob/main/FIRMWARE.ino) in the Arduino IDE, install the `ESP32Servo` and `Bluepad32` libraries, select the **ESP32 Dev Module** board, and upload.
+5. **Pair a controller** — Power on the arm and pair a Bluetooth gamepad. The arm will respond to joystick and button input once connected.
 
 ---
 
 ## Bill of Materials (BOM)
 
 | # | Item | Qty | Description | Price (tax incl.) | Link |
-| --- | --- | --- | --- | --- | --- |
+|---|------|-----|-------------|-------------------|------|
 | 1 | 25KG Digital RC Servo (DS3225) | 4 Pack | Waterproof, high-torque servo for main arm joints | $65.60 | [AliExpress](https://www.aliexpress.com/item/1005009734701047.html) |
 | 2 | MG90S 9g Micro Servo Motor | 2 Pack | Small servo for gripper / wrist actuation | $7.40 | [AliExpress](https://www.aliexpress.com/item/4000903254039.html) |
 | 3 | 5V 10A Power Supply Adapter | 1 | Main power supply for servos | $23.40 | [AliExpress](https://www.aliexpress.com/item/1005004121728138.html) |
@@ -108,12 +108,10 @@ Follow these step-by-step instructions to reproduce and build the robotic arm pr
 
 **Total Project Cost: $175.92**
 
+Full breakdown also available in [BOM.md](https://github.com/Shashvat1333/robotic-arm-project/blob/main/BOM.md).
+
 ---
 
 ## License
 
-This project is open-source. For more details, see the [LICENSE.md](LICENSE.md) file.
-
-```
-
-```
+This project is licensed under the terms specified in [LICENSE.md](https://github.com/Shashvat1333/robotic-arm-project/blob/main/LICENSE.md).
