@@ -27,7 +27,7 @@ Building a robotic arm from scratch meant handling every stage of development pe
 ---
 
 ## Repository Structure
-```text
+
 robotic-arm-project/
 ├── CAD/                   # .step files for all printed/machined parts
 ├── Firmware/               # ESP32 firmware (FIRMWARE.ino)
