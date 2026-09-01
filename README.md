@@ -32,12 +32,12 @@ Instead, a custom perfboard layout uses heavy solder traces to act as main power
 
 | Component | ESP32 GPIO (Signal) | Power (+) | Ground (–) |
 |---|---|---|---|
-| Servo 1 – Base (DS3225MG) | GPIO 21 | Perfboard + bus line | Perfboard – bus line |
-| Servo 2 – Shoulder (DS3225MG) | GPIO 5 | Perfboard + bus line | Perfboard – bus line |
-| Servo 3 – Elbow (DS3225MG) | GPIO 18 | Perfboard + bus line | Perfboard – bus line |
-| Servo 4 – Wrist Pitch (DS3225MG) | GPIO 19 | Perfboard + bus line | Perfboard – bus line |
-| Servo 5 – Wrist Roll (MG90S) | GPIO 4 | Perfboard + bus line | Perfboard – bus line |
-| Servo 6 – Gripper (MG90S) | GPIO 22 | Perfboard + bus line | Perfboard – bus line |
+| Servo 1 – Base (DS3225MG) | GPIO 13 | Perfboard + bus line | Perfboard – bus line |
+| Servo 2 – Shoulder (DS3225MG) | GPIO 12 | Perfboard + bus line | Perfboard – bus line |
+| Servo 3 – Elbow (DS3225MG) | GPIO 14 | Perfboard + bus line | Perfboard – bus line |
+| Servo 4 – Wrist Pitch (DS3225MG) | GPIO 27 | Perfboard + bus line | Perfboard – bus line |
+| Servo 5 – Wrist Roll (MG90S) | GPIO 26 | Perfboard + bus line | Perfboard – bus line |
+| Servo 6 – Gripper (MG90S) | GPIO 25 | Perfboard + bus line | Perfboard – bus line |
 | ESP32 NodeMCU Board | — | VIN pin connected to + bus | GND pin connected to – bus |
 | Power Supply | — | 5V 10A DC Adapter (+) | 5V 10A DC Adapter (–) |
 
