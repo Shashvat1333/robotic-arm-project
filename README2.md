@@ -43,7 +43,7 @@ You can view the complete connection specifications and documentation in [Wiring
 
 ## Firmware
 The control firmware is written in C++ using the Arduino framework, integrating the `ESP32Servo` and `Bluepad32` libraries to map controller joysticks and triggers directly to servo positions. 
-- The complete source code is located at `firmware/firmware.ino`.
+- The complete source code is located [here](https://github.com/Shashvat1333/robotic-arm-project/blob/main/FIRMWARE.ino).
 
 ---
 
